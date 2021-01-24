@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!--   npx browser-sync start --server --files "*.html, css/*.css"    -->
-
-<!-- run simple server:
+<!--
     
-python -m SimpleHTTPServer
-
-#development=1    -Add to the URL to validate
-
--->
+    __   __ ____  ____ ____
+    | \ | / ___| / ___/ ___|
+    |  \| \___ \| |  | |
+    | |\  |___| | |__| |___
+    |_| \_|____/ \____\____| 
+Newton Square Counseling Center
+                Worcester, MA -->
 
 <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- SEO Meta Tags -->
-    <meta name="description"
-        content="Free mobile app HTML landing page template to help you build a great online presence for your app which will convert visitors into users">
-    <meta name="author" content="Inovatik">
+    <meta name="description" content="">
+    <meta name="author" content="David Le">
 
     <!-- OG Meta Tags to improve the way the post looks when you share the page on LinkedIn, Facebook, Google+ -->
-    <meta property="og:site_name" content="" /> <!-- website name -->
+    <meta property="og:site_name" content="www.newtonsquarecounselingcenter.com"/> <!-- website name -->
     <meta property="og:site" content="" /> <!-- website link -->
     <meta property="og:title" content="" /> <!-- title shown in the actual shared post -->
     <meta property="og:description" content="" /> <!-- description shown in the actual shared post -->
@@ -29,101 +29,73 @@ python -m SimpleHTTPServer
     <meta property="og:url" content="" /> <!-- where do you want your post to link to -->
     <meta property="og:type" content="article" />
 
-    <!-- Website Title -->
-    <title>NSCC Website</title>
+    <!-- Favicon  -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/touch/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Newton Square Counseling Center">
+    <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <meta name="apple-mobile-web-app-title" content="Newton Square Counseling Center">
+    <link rel="apple-touch-icon" href="images/touch/apple-touch-icon.png">
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <!-- Color the status bar on mobile devices -->
+    <meta name="theme-color" content="#ffffff">
+    <!-- humans.txt-->
+    <link type="text/plain" rel="author" href="http://domain/humans.txt" />
 
+
+    <!-- Website Title -->
+    <title>Newton Square Counseling Center</title>
+
+    
     <!-- bootstrap CDN-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <!-- Styles -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!--CSS Typography Styles -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i" rel="stylesheet">
+    
+    <!-- CSS Styles -->
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/fontawesome-all.css" rel="stylesheet">
     <link href="css/swiper.css" rel="stylesheet">
     <link href="css/magnific-popup.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
-
-
-
-
-
-    <!-- Favicon  -->
-    <link rel="icon" href="images/favicon.png">
-    <style>
-        body {
-            font: 11px/1.5em "Lucida Grande";
-        }
-
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            font-family: helvetica, arial, verdana, sans-serif;
-            font-weight: normal;
-        }
-
-        h1 {
-            font-size: 218%;
-        }
-
-        h2 {
-            font-size: 164%;
-        }
-
-        h3 {
-            font-size: 145%;
-        }
-
-        h4 {
-            font-size: 118%;
-        }
-
-        .hero-container {
-
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-
-        /* Centered text */
-        .hero-container-center {
-
-
-
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-
-        }
-    </style>
+    <link href="css/preloader.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet"><!--End of CSS Styles -->
+    <!--End of CSS Styles -->
 </head>
 
 <body data-spy="scroll" data-target=".fixed-top">
 
-
     <!-- Preloader -->
-    <div class="spinner-wrapper">
-        <div class="spinner">
-            <div class="bounce1"></div>
-            <div class="bounce2"></div>
-            <div class="bounce3"></div>
+    <div class="loader">
+        <div class="wrap">
+          <div class="loading">
+            <div class="bounceball"></div>
+            <div class="text">NOW LOADING</div>
+          </div>
         </div>
-    </div>
+    </div><!-- end of preloader -->
     <!-- end of preloader -->
 
-
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-md navbar-dark navbar-custom fixed-top">
+        <nav class="navbar navbar-expand-md navbar-dark navbar-custom fixed-top">
         <!-- Text Logo - Use this if you don't have a graphic logo -->
-        <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Leno</a> -->
+        <a class="navbar-brand logo-text page-scroll" href="index.html">
+            <div class="brand-title">Newton Square</div>
+            <div class="brand-subtitle">Counseling Center</div>
+        </a>
 
-        <!-- Image Logo -->
-        <a class="navbar-brand logo-image" href="sitemap.html"><img src="svg\logo.svg" alt="alternative"></a>
+        <!-- Image Logo
+        <a class="navbar-brand logo-image" href="sitemap.html"><img src="svg\logo.svg" alt="alternative"></a> 
+        -->
 
         <!-- Mobile Menu Toggle Button -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
@@ -131,12 +103,12 @@ python -m SimpleHTTPServer
             <span class="navbar-toggler-awesome fas fa-bars"></span>
             <span class="navbar-toggler-awesome fas fa-times"></span>
         </button>
-        <!-- end of mobile menu toggle button -->
 
+        <!-- end of mobile menu toggle button -->
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
             <ul class="ml-auto navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link page-scroll" href="C:\htdocs\nscc\index.html">HOME <span
+                    <a class="nav-link page-scroll" href="index.html">HOME <span
                             class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
@@ -195,7 +167,7 @@ python -m SimpleHTTPServer
                         <div class="dropdown-items-divide-hr"></div>
 
                         <a class="dropdown-item" href="privacy-policy.html"><span class="item-text">PRIVACY
-                                POLICY</span></a>
+                                POLICY </span></a>
                     </div>
                 </li>
                 <!-- end of dropdown menu -->
@@ -205,50 +177,32 @@ python -m SimpleHTTPServer
                 </li>
             </ul>
         </div>
-    </nav> <!-- end of navbar -->
+        </nav> <!-- end of navbar -->
     <!-- end of navbar -->
-
-
-
+    
     <!-- Header -->
     <header id="header" class="header">
         <div class="header-content">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6">
-                        <div class="hero-container">
-                            <div class="text-container">
-                                <h1><span id="js-rotating">NSCC, SITEMAP</span>
-                                </h1>
-                                <p class="p-large">Leno is one of the easiest and feature packed marketing automation
-                                    apps
-                                    in the market. Download it today!</p>
-
-                            </div>
-                        </div> <!-- end of col -->
-                        <div class="col-lg-6">
-                            <div class="image-container">
-                                <img class="img-fluid" src="svg/treatment-plan.svg" alt="alternative">
-                            </div> <!-- end of image-container -->
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <div class="text-container">
-                                    </div><a class="btn-solid-lg page-scroll" href="#your-link"><i
-                                            class="fab fa-apple"></i>APP
-                                        STORE</a>
-                                    <a class="btn-solid-lg page-scroll" href="#your-link"><i
-                                            class="fab fa-google-play"></i>PLAY
-                                        STORE</a>
-                                </div>
-                            </div>
+                        <div class="text-container">
+                            <h1>Site Map</h1> <!-- remove css  "js-rotating"-->
+                            <p class="p-large">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book.</p>
+                            <a class="btn-solid-lg page-scroll" href="#">Learn More</a>
                         </div>
-                    </div>
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
+                    </div> <!-- end of col -->
+                    <div class="col-lg-6">
+                        <div class="image-container">
+                            <img class="img-fluid" src="svg/treatment-plan.svg" alt="alternative">
+                        </div> <!-- end of image-container -->
+                    </div> <!-- end of col -->
+                </div> <!-- end of row -->
+            </div> <!-- end of container -->
         </div> <!-- end of header-content -->
     </header> <!-- end of header -->
     <!-- end of header -->
+
     <br>
 
     <body data-spy="scroll" data-target=".fixed-top">

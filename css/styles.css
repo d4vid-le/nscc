@@ -28,6 +28,10 @@ Colors:
 /******************************/
 /*     01. General Styles     */
 /******************************/
+body {
+    background-color: #eeeeee !important;
+}
+
 body,
 html {
     width: 100%;
@@ -107,7 +111,7 @@ a:hover {
 }
 
 a.turquoise {
-    color: #00c9db;
+    color: #0011ff;
 }
 
 a.white {
@@ -489,43 +493,6 @@ screen and (-ms-high-contrast: none) {
 
 /* end of form success and error message animation - Animate.css */
 
-/* Fade-move Animation For Lightbox - Magnific Popup */
-/* at start */
-.my-mfp-slide-bottom .zoom-anim-dialog {
-    opacity: 0;
-    transition: all 0.2s ease-out;
-    transform: translateY(-1.25rem) perspective(37.5rem) rotateX(10deg);
-}
-
-/* animate in */
-.my-mfp-slide-bottom.mfp-ready .zoom-anim-dialog {
-    opacity: 1;
-    transform: translateY(0) perspective(37.5rem) rotateX(0);
-}
-
-/* animate out */
-.my-mfp-slide-bottom.mfp-removing .zoom-anim-dialog {
-    opacity: 0;
-    transform: translateY(-0.625rem) perspective(37.5rem) rotateX(10deg);
-}
-
-/* dark overlay, start state */
-.my-mfp-slide-bottom.mfp-bg {
-    opacity: 0;
-    transition: opacity 0.2s ease-out;
-}
-
-/* animate in */
-.my-mfp-slide-bottom.mfp-ready.mfp-bg {
-    opacity: 0.8;
-}
-
-/* animate out */
-.my-mfp-slide-bottom.mfp-removing.mfp-bg {
-    opacity: 0;
-}
-
-/* end of fade-move animation for lightbox - magnific popup */
 
 /* Fade Animation For Image Slider - Magnific Popup */
 @-webkit-keyframes fadeIn {
@@ -584,71 +551,6 @@ screen and (-ms-high-contrast: none) {
 /*************************/
 /*     02. Preloader     */
 /*************************/
-
-@import url(https://fonts.googleapis.com/css?family=Montserrat);
-
-body {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    font-family: Montserrat;
-    background-color: #e2e2e2;
-    
-}
-
-.wrap {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.text {
-    color: #000000;
-    display: inline-block;
-    margin-left: 5px;
-}
-
-.bounceball {
-    position: relative;
-    display: inline-block;
-    height: 37px;
-    width: 15px;
-}
-
-.bounceball:before {
-    position: absolute;
-    content: '';
-    display: block;
-    top: 0;
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    background-color: #000000;
-    transform-origin: 50%;
-    animation: bounce 500ms alternate infinite ease;
-}
-
-@keyframes bounce {
-    0% {
-        top: 30px;
-        height: 5px;
-        border-radius: 60px 60px 20px 20px;
-        transform: scaleX(2);
-    }
-
-    35% {
-        height: 15px;
-        border-radius: 50%;
-        transform: scaleX(1);
-    }
-
-    100% {
-        top: 0;
-    }
-}
-
-
 
 /************************/
 /*   print              */
@@ -1606,7 +1508,7 @@ body {
 }
 
 .footer .fa-stack:hover .fa-stack-2x {
-    color: #00c9db;
+    color: #0012b1;
 }
 
 
