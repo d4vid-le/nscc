@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<!--
-    
+<!--   
     __   __ ____  ____ ____
     | \ | / ___| / ___/ ___|
     |  \| \___ \| |  | |
@@ -10,7 +8,6 @@
     |_| \_|____/ \____\____| 
 Newton Square Counseling Center
                 Worcester, MA -->
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,7 +16,6 @@ Newton Square Counseling Center
     <!-- SEO Meta Tags -->
     <meta name="description" content="">
     <meta name="author" content="David Le">
-
     <!-- OG Meta Tags to improve the way the post looks when you share the page on LinkedIn, Facebook, Google+ -->
     <meta property="og:site_name" content="www.newtonsquarecounselingcenter.com"/> <!-- website name -->
     <meta property="og:site" content="" /> <!-- website link -->
@@ -28,7 +24,6 @@ Newton Square Counseling Center
     <meta property="og:image" content="" /> <!-- image link, make sure it's jpg -->
     <meta property="og:url" content="" /> <!-- where do you want your post to link to -->
     <meta property="og:type" content="article" />
-
     <!-- Favicon  -->
     <link rel="apple-touch-icon" sizes="180x180" href="images/touch/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
@@ -49,42 +44,38 @@ Newton Square Counseling Center
     <meta name="theme-color" content="#ffffff">
     <!-- humans.txt-->
     <link type="text/plain" rel="author" href="http://domain/humans.txt" />
-
-
     <!-- Website Title -->
     <title>Newton Square Counseling Center</title>
-
-
     <!-- bootstrap CDN-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-    <!--CSS Styles -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--CSS Typography Styles -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i" rel="stylesheet">
+    <!-- CSS Styles -->
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/fontawesome-all.css" rel="stylesheet">
     <link href="css/swiper.css" rel="stylesheet">
     <link href="css/magnific-popup.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet"><!--End of CSS Styles -->
+    <link href="css/preloader.css" rel="stylesheet">
+    <link href="css/typography.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/sliders.css" rel="stylesheet">
+    <link href="css/mediaqueries.css" rel="stylesheet"><!--End of CSS Styles -->
     <!--End of CSS Styles -->
 </head>
-
 <body data-spy="scroll" data-target=".fixed-top">
-
-    <!-- Preloader 
-    <div class="loader">
+    <!-- Preloader -->
+    <div class="loader" id="preloader">
         <div class="wrap">
           <div class="loading">
             <div class="bounceball"></div>
-            <div class="text">NOW LOADING</div>
+            <div class="text">Loading...</div>
           </div>
         </div>
     </div><!-- end of preloader -->
     <!-- end of preloader -->
-
-    <!-- Navbar -->
-        <nav class="navbar navbar-expand-md navbar-dark navbar-custom fixed-top">
+    <!-- Navbar Starts-->
+    <nav class="navbar navbar-expand-md navbar-dark navbar-custom fixed-top">
         <!-- Text Logo - Use this if you don't have a graphic logo -->
         <a class="navbar-brand logo-text page-scroll" href="index.html">
             <div class="brand-title">Newton Square</div>
@@ -106,7 +97,8 @@ Newton Square Counseling Center
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
             <ul class="ml-auto navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link page-scroll" href="index.html">HOME</a>
+                    <a class="nav-link page-scroll" href="index.html">HOME <span
+                            class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link page-scroll" href="about.html">ABOUT</a>
@@ -141,8 +133,7 @@ Newton Square Counseling Center
                 <!-- Dropdown Menu -->
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle page-scroll" href="resources.html" id="navbarDropdown"
-                        role="button" aria-haspopup="true" aria-expanded="false">RESOURCES<span
-                        class="sr-only">(current)</span></a>
+                        role="button" aria-haspopup="true" aria-expanded="false">RESOURCES</a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
 
                         <a class="dropdown-item" href="#"><span class="item-text">HIPAA COMPLIENCE</span></a>
@@ -165,7 +156,7 @@ Newton Square Counseling Center
                         <div class="dropdown-items-divide-hr"></div>
 
                         <a class="dropdown-item" href="privacy-policy.html"><span class="item-text">PRIVACY
-                                POLICY</span></a>
+                                POLICY </span></a>
                     </div>
                 </li>
                 <!-- end of dropdown menu -->
@@ -175,9 +166,8 @@ Newton Square Counseling Center
                 </li>
             </ul>
         </div>
-        </nav> <!-- end of navbar -->
+    </nav> <!-- end of navbar -->
     <!-- end of navbar -->
-    
     <!-- Header -->
     <header id="header" class="header">
         <div class="header-content">
@@ -185,9 +175,8 @@ Newton Square Counseling Center
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="text-container">
-                            <h1>Newtown Square Counseling Center</h1> <!-- remove css  "js-rotating"-->
-                            <p class="p-large">Leno is one of the easiest and feature packed marketing automation apps
-                                in the market. Download it today!</p>
+                            <h1>Resources</h1>
+                            <p class="p-large">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book.</p>
                             <a class="btn-solid-lg page-scroll" href="#">Learn More</a>
                         </div>
                     </div> <!-- end of col -->
@@ -201,91 +190,126 @@ Newton Square Counseling Center
         </div> <!-- end of header-content -->
     </header> <!-- end of header -->
     <!-- end of header -->
+
     <br>
-<section>
-    <div class="" id="">
-        <h2>Title Goes Here</h2>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cras fermentum odio eu feugiat pretium nibh ipsum consequat. Amet commodo nulla facilisi nullam vehicula ipsum a. Nisl nisi scelerisque eu ultrices vitae auctor eu. Diam sit amet nisl suscipit. Ut ornare lectus sit amet est. Aenean euismod elementum nisi quis. Lorem donec massa sapien faucibus et molestie ac feugiat sed. Pellentesque adipiscing commodo elit at imperdiet dui. Tincidunt vitae semper quis lectus nulla. Ornare massa eget egestas purus viverra accumsan. Suscipit adipiscing bibendum est ultricies integer quis auctor elit sed. Aenean et tortor at risus viverra adipiscing at.
 
-            Amet est placerat in egestas erat imperdiet sed euismod. Bibendum enim facilisis gravida neque convallis a cras. Egestas maecenas pharetra convallis posuere morbi leo urna molestie. Iaculis eu non diam phasellus vestibulum lorem sed risus ultricies. Nulla facilisi cras fermentum odio eu feugiat. Nisl condimentum id venenatis a condimentum vitae sapien. Massa vitae tortor condimentum lacinia quis vel eros. Aliquam sem fringilla ut morbi tincidunt augue interdum velit. Porttitor leo a diam sollicitudin tempor id eu. Eleifend quam adipiscing vitae proin sagittis nisl rhoncus mattis. Vulputate mi sit amet mauris commodo quis.
-        </p>
-        <h3>Sub-title goes here</h3>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cras fermentum odio eu feugiat pretium nibh ipsum consequat. Amet commodo nulla facilisi nullam vehicula ipsum a. Nisl nisi scelerisque eu ultrices vitae auctor eu. Diam sit amet nisl suscipit. Ut ornare lectus sit amet est. Aenean euismod elementum nisi quis. Lorem donec massa sapien faucibus et molestie ac feugiat sed. Pellentesque adipiscing commodo elit at imperdiet dui. Tincidunt vitae semper quis lectus nulla. Ornare massa eget egestas purus viverra accumsan. Suscipit adipiscing bibendum est ultricies integer quis auctor elit sed. Aenean et tortor at risus viverra adipiscing at.
-
-            Amet est placerat in egestas erat imperdiet sed euismod. Bibendum enim facilisis gravida neque convallis a cras. Egestas maecenas pharetra convallis posuere morbi leo urna molestie. Iaculis eu non diam phasellus vestibulum lorem sed risus ultricies. Nulla facilisi cras fermentum odio eu feugiat. Nisl condimentum id venenatis a condimentum vitae sapien. Massa vitae tortor condimentum lacinia quis vel eros. Aliquam sem fringilla ut morbi tincidunt augue interdum velit. Porttitor leo a diam sollicitudin tempor id eu. Eleifend quam adipiscing vitae proin sagittis nisl rhoncus mattis. Vulputate mi sit amet mauris commodo quis.
-        </p>
-        <h3>Sub-title Goes here</h3>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cras fermentum odio eu feugiat pretium nibh ipsum consequat. Amet commodo nulla facilisi nullam vehicula ipsum a. Nisl nisi scelerisque eu ultrices vitae auctor eu. Diam sit amet nisl suscipit. Ut ornare lectus sit amet est. Aenean euismod elementum nisi quis. Lorem donec massa sapien faucibus et molestie ac feugiat sed. Pellentesque adipiscing commodo elit at imperdiet dui. Tincidunt vitae semper quis lectus nulla. Ornare massa eget egestas purus viverra accumsan. Suscipit adipiscing bibendum est ultricies integer quis auctor elit sed. Aenean et tortor at risus viverra adipiscing at.
-
-Amet est placerat in egestas erat imperdiet sed euismod. Bibendum enim facilisis gravida neque convallis a cras. Egestas maecenas pharetra convallis posuere morbi leo urna molestie. Iaculis eu non diam phasellus vestibulum lorem sed risus ultricies. Nulla facilisi cras fermentum odio eu feugiat. Nisl condimentum id venenatis a condimentum vitae sapien. Massa vitae tortor condimentum lacinia quis vel eros. Aliquam sem fringilla ut morbi tincidunt augue interdum velit. Porttitor leo a diam sollicitudin tempor id eu. Eleifend quam adipiscing vitae proin sagittis nisl rhoncus mattis. Vulputate mi sit amet mauris commodo quis.
-        </p>
-    </div>
-</section>
-                 
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 offset-lg-1">
+                <div class="text-container">
+                    <h3>Add Title</h3>
+                    <p>Felis bibendum ut tristique et egestas quis ipsum. Sed augue lacus viverra vitae congue eu consequat. Id semper risus in hendrerit. Volutpat diam ut venenatis tellus in metus vulputate eu scelerisque. Non tellus orci ac auctor. A cras semper auctor neque vitae tempus quam. Turpis egestas pretium aenean pharetra magna ac placerat. Amet nisl suscipit adipiscing bibendum. Nulla facilisi nullam vehicula ipsum a arcu cursus vitae. Nulla at volutpat diam ut venenatis tellus. Pulvinar pellentesque habitant morbi tristique senectus et netus et malesuada. Diam quis enim lobortis scelerisque fermentum dui faucibus in ornare. Eleifend mi in nulla posuere sollicitudin. Habitasse platea dictumst quisque sagittis purus sit amet. Morbi quis commodo odio aenean sed adipiscing diam donec adipiscing. Amet nulla facilisi morbi tempus iaculis urna. Amet nisl suscipit adipiscing bibendum est ultricies. Risus quis varius quam quisque. Ultrices gravida dictum fusce ut. Tellus orci ac auctor augue mauris.</p>
+                    
+                </div> <!-- end of text-container -->
+            </div>
+        </div>
+    </div> <!-- end of row -->
+    </div> <!-- end of container -->
+    
+    <br>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 offset-lg-1">
+                <div class="text-container">
+                    <h3>Add Title</h3>
+                    <p>Felis bibendum ut tristique et egestas quis ipsum. Sed augue lacus viverra vitae congue eu consequat. Id semper risus in hendrerit. Volutpat diam ut venenatis tellus in metus vulputate eu scelerisque. Non tellus orci ac auctor. A cras semper auctor neque vitae tempus quam. Turpis egestas pretium aenean pharetra magna ac placerat. Amet nisl suscipit adipiscing bibendum. Nulla facilisi nullam vehicula ipsum a arcu cursus vitae. Nulla at volutpat diam ut venenatis tellus. Pulvinar pellentesque habitant morbi tristique senectus et netus et malesuada. Diam quis enim lobortis scelerisque fermentum dui faucibus in ornare. Eleifend mi in nulla posuere sollicitudin. Habitasse platea dictumst quisque sagittis purus sit amet. Morbi quis commodo odio aenean sed adipiscing diam donec adipiscing. Amet nulla facilisi morbi tempus iaculis urna. Amet nisl suscipit adipiscing bibendum est ultricies. Risus quis varius quam quisque. Ultrices gravida dictum fusce ut. Tellus orci ac auctor augue mauris.</p>
+                    
+                </div> <!-- end of text-container -->
+            </div>
+        </div>
+    </div> <!-- end of row -->
+    </div> <!-- end of container -->
+    
+    <br>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 offset-lg-1">
+                <div class="text-container">
+                    <h3>Add Title</h3>
+                    <p>Felis bibendum ut tristique et egestas quis ipsum. Sed augue lacus viverra vitae congue eu consequat. Id semper risus in hendrerit. Volutpat diam ut venenatis tellus in metus vulputate eu scelerisque. Non tellus orci ac auctor. A cras semper auctor neque vitae tempus quam. Turpis egestas pretium aenean pharetra magna ac placerat. Amet nisl suscipit adipiscing bibendum. Nulla facilisi nullam vehicula ipsum a arcu cursus vitae. Nulla at volutpat diam ut venenatis tellus. Pulvinar pellentesque habitant morbi tristique senectus et netus et malesuada. Diam quis enim lobortis scelerisque fermentum dui faucibus in ornare. Eleifend mi in nulla posuere sollicitudin. Habitasse platea dictumst quisque sagittis purus sit amet. Morbi quis commodo odio aenean sed adipiscing diam donec adipiscing. Amet nulla facilisi morbi tempus iaculis urna. Amet nisl suscipit adipiscing bibendum est ultricies. Risus quis varius quam quisque. Ultrices gravida dictum fusce ut. Tellus orci ac auctor augue mauris.</p>
+                    
+                </div> <!-- end of text-container -->
+            </div>
+        </div>
+    </div> <!-- end of row -->
+    </div> <!-- end of container -->
+    
+    <br>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 offset-lg-1">
+                <div class="text-container">
+                    <h3>Add Title</h3>
+                    <p>Felis bibendum ut tristique et egestas quis ipsum. Sed augue lacus viverra vitae congue eu consequat. Id semper risus in hendrerit. Volutpat diam ut venenatis tellus in metus vulputate eu scelerisque. Non tellus orci ac auctor. A cras semper auctor neque vitae tempus quam. Turpis egestas pretium aenean pharetra magna ac placerat. Amet nisl suscipit adipiscing bibendum. Nulla facilisi nullam vehicula ipsum a arcu cursus vitae. Nulla at volutpat diam ut venenatis tellus. Pulvinar pellentesque habitant morbi tristique senectus et netus et malesuada. Diam quis enim lobortis scelerisque fermentum dui faucibus in ornare. Eleifend mi in nulla posuere sollicitudin. Habitasse platea dictumst quisque sagittis purus sit amet. Morbi quis commodo odio aenean sed adipiscing diam donec adipiscing. Amet nulla facilisi morbi tempus iaculis urna. Amet nisl suscipit adipiscing bibendum est ultricies. Risus quis varius quam quisque. Ultrices gravida dictum fusce ut. Tellus orci ac auctor augue mauris.</p>
+                    
+                </div> <!-- end of text-container -->
+            </div>
+        </div>
+    </div> <!-- end of row -->
+    </div> <!-- end of container -->
+    
+    <br>
 
     <!-- Footer -->
     <div class="footer">
         <div class="container">
+            <!-- <a class="logo-image" href="index.html"><img src="svg\logo02.svg" alt="alternative"></a> --><!-- NSCC Logo Image Alt-->
+            <br>
             <div class="row">
                 <div class="col-md-4">
                     <div class="footer-col">
-                        <a class="navbar-brand logo-image" href="index.html"><img src="svg\logo02.svg"
-                                alt="alternative"></a>
-                        <h4>About</h4>
-                        <p>We're passionate about creating the best mobile apps for personal development</p>
+                        <h4>NSCC</h4>
+                        <p> The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book.</p>
                     </div>
                 </div> <!-- end of col -->
                 <div class="col-md-4">
                     <div class="footer-col middle">
-                        <h4>Important Links</h4>
+                        <h4>Additional Resources</h4>
                         <ul class="list-unstyled li-space-lg">
                             <li class="media">
-                                <i class="fas fa-square"></i>
-                                <div class="media-body">Contact our doctors<a class="turquoise"
-                                        href="contact.html">Schedule an Appointment</a></div>
+                                <i class="fas fa-circle"></i>
+                                <div class="media-body">Further Information
+                                    <a class="turquoise" href="contact.html">Contact Us</a>
+                                </div>
                             </li>
                             <li class="media">
-                                <i class="fas fa-square"></i>
-                                <div class="media-body">Read our <a class="turquoise" href="terms-conditions.html">Terms
-                                        & Conditions</a>, <a class="turquoise" href="privacy-policy.html">Privacy
-                                        Policy</a></div>
+                                <i class="fas fa-circle"></i>
+                                <div class="media-body">Read our <a class="turquoise" href="terms-conditions.html">Terms & Conditions</a>, <a class="turquoise" href="privacy-policy.html">Privacy Policy</a>, <a class="turquoise" href="terms-conditions.html">Terms & Conditions</a>
+                            </li>
+                            <li class="media">
+                                <i class="fas fa-circle"></i>
+                                <div class="media-body">Site Navigation<a class="turquoise" href="sitemap.html">Site Map</a>
+                                </div>
                             </li>
                         </ul>
-
                     </div>
                 </div> <!-- end of col -->
                 <div class="col-md-4">
                     <div class="footer-col last">
                         <h4>Social Media</h4>
                         <span class="fa-stack">
-                            <a href="#your-link">
+                            <a href="#">
                                 <i class="fas fa-circle fa-stack-2x"></i>
                                 <i class="fab fa-facebook-f fa-stack-1x"></i>
                             </a>
                         </span>
                         <span class="fa-stack">
-                            <a href="#your-link">
+                            <a href="#">
                                 <i class="fas fa-circle fa-stack-2x"></i>
                                 <i class="fab fa-twitter fa-stack-1x"></i>
                             </a>
                         </span>
                         <span class="fa-stack">
-                            <a href="#your-link">
+                            <a href="#"">
                                 <i class="fas fa-circle fa-stack-2x"></i>
                                 <i class="fab fa-google-plus-g fa-stack-1x"></i>
                             </a>
                         </span>
                         <span class="fa-stack">
-                            <a href="#your-link">
-                                <i class="fas fa-circle fa-stack-2x"></i>
-                                <i class="fab fa-instagram fa-stack-1x"></i>
-                            </a>
-                        </span>
-                        <span class="fa-stack">
-                            <a href="#your-link">
+                            <a href="#">
                                 <i class="fas fa-circle fa-stack-2x"></i>
                                 <i class="fab fa-linkedin-in fa-stack-1x"></i>
                             </a>
@@ -297,20 +321,19 @@ Amet est placerat in egestas erat imperdiet sed euismod. Bibendum enim facilisis
     </div> <!-- end of footer -->
     <!-- end of footer -->
 
-   
     <!-- Copyright -->
     <div class="copyright">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <p class="p-small">Copyright © <a href="#">NSCC</a></p>
+                    <p class="p-small">Copyright © <a href="#">Newton Square Counseling Center, 2020.</a></p>
                 </div> <!-- end of col -->
             </div> <!-- enf of row -->
         </div> <!-- end of container -->
     </div> <!-- end of copyright -->
     <!-- end of copyright -->
 
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
     <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -319,8 +342,7 @@ Amet est placerat in egestas erat imperdiet sed euismod. Bibendum enim facilisis
             ga('create', 'UA-XXXXX-X', 'auto');
             ga('send', 'pageview');
     </script> <!-- End of Google Analytics-->
-        <!-- End of Google Analytics-->
-
+    <!-- End of Google Analytics-->
     <!-- Scripts -->
     <script src="js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
     <script src="js/popper.min.js"></script> <!-- Popper tooltip library for Bootstrap -->
@@ -335,14 +357,18 @@ Amet est placerat in egestas erat imperdiet sed euismod. Bibendum enim facilisis
     <script src="js/morphext.min.js"></script> <!-- Morphtext rotating text in the header -->
     <script src="js/validator.min.js"></script> <!-- Validator.js - Bootstrap plugin that validates forms -->
     <script src="js/scripts.js"></script> <!-- Custom scripts -->
-    <script id="__bs_script__">//<![CDATA[
-        document.write("<script async src='http://HOST:3002/browser-sync/browser-sync-client.js?v=2.26.13'><\/script>".replace("HOST", location.hostname));
-//]]></script>
-    <script async src="gulpfile.js"></script>
-    <script async src="gulptask.js"></script>
-
-
-
+    <script src="js/main.js"></script> <!-- build:js scripts/main.min.js -->
+    <script async src="gulpfile.js"></script> <!-- gulp build-->
+    <script> if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js').then(function(registration) {
+            // Registration was successful
+            console.log('ServiceWorker registration successful with scope: ', registration.scope);
+            }).catch(function(err) {
+            // registration failed :(
+            console.log('ServiceWorker registration failed: ', err);
+            });
+        }
+    </script><!-- Serviceworker Script-->
+    <!--End of Scripts -->
 </body>
-
 </html>

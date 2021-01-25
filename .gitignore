@@ -1,4 +1,9 @@
 node_modules
-node_modules
+node_modules/
 desktop-tutorial/
 gulp-project/
+gulp-files/
+myapp/
+my-project/
+components/
+external styles.css/
