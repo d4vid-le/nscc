@@ -62,6 +62,49 @@ Newton Square Counseling Center
     <link href="css/sliders.css" rel="stylesheet">
     <link href="css/mediaqueries.css" rel="stylesheet"><!--End of CSS Styles -->
     <!--End of CSS Styles -->
+
+    <sytle>
+
+      #profile-1,
+      #profile-2,
+      #profile-3,
+      #profile-4,
+      #profile-5,
+      #profile-6 {
+      margin: 75px 25px 75px 25px;
+      }
+
+      /* Small devices (tablets, 768px and up) */
+
+      @media (min-width: @screen-sm-min) {
+      .profile-images {
+      height: 150px;
+      width: 150px;
+      }
+
+
+
+      };
+
+      /* Medium devices (desktops, 992px and up) */
+      @media (min-width: @screen-md-min) {
+      .float-left {
+      float: left;
+      }
+      .clear-right {
+      clear: right;
+      }
+      .clear-both {
+      float: left;
+      }
+      };
+
+      /* Large devices (large desktops, 1200px and up) */
+      @media (min-width: @screen-lg-min) { ... }
+  </sytle>
+
+
+    
 </head>
 <body data-spy="scroll" data-target=".fixed-top">
     <!-- Preloader -->
@@ -176,8 +219,6 @@ Newton Square Counseling Center
                         <div class="text-container">
                             <h1>Profesionals/Team</h1> <!-- remove css  "js-rotating"-->
                             <p class="p-large">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book.</p>
-                            <a class="btn-solid-lg page-scroll" href="#">Learn More</a>
-                        </div>
                     </div> <!-- end of col -->
                     <div class="col-lg-6">
                         <div class="image-container">
@@ -208,159 +249,247 @@ Newton Square Counseling Center
 
 <br>
 
-  <div class="basic-3" id="card-container">
+<div class="container">
+  <div class="row">
+      <div class="col-xs-6 col-md-4" id="profile-1">
+          <h2></h2>
+          <div class="float-left"></div>
+          <h3>P.C. - President</h3>
+          <img class="profile-image" src="images/testimonial-6.jpg" alt="Profile Image">
+          <h4>Zamir Nestelbaum, MD., MPH</h4>
+      </div>
+      <div class="clear-right">
+          <h5>Credentials</h5>
+          <ul>
+              <li>Board Certified in Psychiatry</li>
+              <li>Fellow, American Psychiatric Association</li>
+              <li>Chief, Psychiatric Services at Harrington Memorial Hospital</li>
+              <li>Psychiatric Consultant, Monson Developmental Center</li>
+              <li>Independent Medical Examiner, Massachusetts Department of Industrial
+                  Accidents</li>
+              <li>Associate in Psychiatry, University of Massachusetts Medical School</li>
+              <li>Training: MD, University of Massachusetts Medical School</li>
+              <li>MPH, University of Michigan</li>
+              <li>Internship: George Washington University Medical Center, Washington, D.C.
+              </li>
+              <li>Residency: Mt. Sinai Medical Center, New York</li>
+              <li>Fellowship: New York State Psychiatric Institute</li>
+          </ul>
+      </div>
+      <div class="clear-both">
+          <p>Dr. Nestelbaum provides psychiatric evaluation and psychopharmocology and
+              treatment for
+              adults, older adults, and adolescents over age 15. Disability and Forensic
+              evaluations
+              are also provided. Dr. Nestelbaum grew up in Worcester and knows the
+              neighborhood quite
+              well. He has been practicing at Newton Square since 1989.</p>
+          <p>
+              Virtually all local insurance plans are accepted. Appointments can be made or
+              changed through Ginny Maher-Cooper at: nscc338@verizon.net. No clinical
+              information or prescription refill requests will be handled through this email
+              address.
+          </p>
+      </div>
+      <div class="col-xs-6 col-md-4" id="profile-2">
+          <h2></h2>
+          <div class="float-left"></div>
+          <h3>Consultant, Health Practitionere</h3>
+          <img class="profile-image" src="images/testimonial-6.jpg" alt="Profile Image">
+          <h4>Jennifer Barris, MA, LICSW</h4>
+      </div>
+      <div class="clear-right">
+          <h5>Credentials</h5>
+          <ul>
+              <li>B.A. at Boston University</li>
+              <li>M.A. in Social Work at The University of New England</li>
+              <li>Cognitive Behavioral Psychotherapy</li>
+              <li>Credential #3</li>
+          </ul>
+      </div>
+      <div class="clear-both">
+          <p>
+              Jennifer is a private practitioner and consultant. She received her B.A. at
+              Boston University and Master's of Social Work at The University of New England,
+              Me. She is an experienced clinician of nearly 20 years who is primarily trained
+              in Cognitive Behavioral psychotherapy with an emphasis on depression and
+              anxiety.
+          </p>
+          <p>
+              Further emphasis has been on adolescents, adults and Employee Assistance
+              Programs, where she is contracted with a variety of company's EAP in order to
+              provide short-term therapy to employees and their families.
 
-    <div class="card" id="card1" style="width: 18rem">
-      <img src="svg\Avatar1.svg" class="card-img-top" alt="..." />
-      <div class="card-body">
-        <h5 class="card-title">Card title 01</h5>
-        <p class="card-text">
-          Some quick example text to build on the card title and make up the bulk of the
-          card's content.
-        </p>
+          </p>
+        </div>
+        <div class="col-xs-6 col-md-4" id="profile-2">
+          <h2></h2>
+          <div class="float-left"></div>
+          <h3>Consultant, Health Practitioner</h3>
+          <img class="profile-image" src="images/testimonial-6.jpg" alt="Profile Image">
+          <h4>Christopher A. Cimmino, MSW, LICSW, LADC I</h4>
       </div>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">Cras justo odio</li>
-        <li class="list-group-item">Dapibus ac facilisis in</li>
-        <li class="list-group-item">Vestibulum at eros</li>
-      </ul>
-      <div class="card-body">
-        <a href="#" class="card-link">Card link</a>
-        <a href="#" class="card-link">Another link</a>
+      <div class="clear-right">
+          <h5>Credentials</h5>
+          <ul>
+              <li>B.A. at Boston University</li>
+              <li>M.A. in Social Work at The University of New England</li>
+              <li>Cognitive Behavioral Psychotherapy</li>
+          </ul>
       </div>
-    </div>
+        
 
-    <div class="card" id="card2" style="width: 18rem">
-      <img src="svg\Avatar4.svg" class="card-img-top" alt="..." />
-      <div class="card-body">
-        <h5 class="card-title">Card title 02</h5>
-        <p class="card-text">
-          Some quick example text to build on the card title and make up the bulk of the
-          card's content.
-        </p>
+          <div class="clear-both">
+              <p>Christopher has over twenty-five years of experience in providing services
+                  for those
+                  suffering from mental health and substance abuse related issues. Over the
+                  past twenty
+                  years, Christopher has emerged as a highly trusted and reliable therapist,
+                  as he
+                  continues to offer the highest level and care for his patients.</p>
+
+              <p>
+                  His focus is cognitive-behavioral therapy, which allows individuals to set
+                  attainable
+                  goals through planning, pacing, and prioritizing. Consequently, individuals
+                  can change
+                  negative thought patterns and core beliefs. As a result, individuals often
+                  strengthen
+                  their ability to communicate effectively and become better advocates for
+                  themselves.
+                  Clients will learn to become more empowered, feel more peaceful and
+                  strengthen their
+                  relationships with others.
+
+              </p>
+              <p>
+                  Services include one to one therapy, group and family counseling in the
+                  comfort of a
+                  private setting. Specialties include anxiety, depression, stressful life
+                  changes, anger
+                  management, self-esteem, men's issues, grief, substance abuse,
+                  co-dependency, behavioral
+                  addictions, stress management and parenting issues. In addition, he offers
+                  psycho-educational and support for parents concerned about their
+                  child/teen's use of
+                  substances. Most insurance plans are accepted and a sliding fee scale is
+                  available for
+                  those who chose to self pay.
+              </p>
+          </div>
       </div>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">Cras justo odio</li>
-        <li class="list-group-item">Dapibus ac facilisis in</li>
-        <li class="list-group-item">Vestibulum at eros</li>
-      </ul>
-      <div class="card-body">
-        <a href="#" class="card-link">Card link</a>
-        <a href="#" class="card-link">Another link</a>
-      </div>
-    </div>
+      <div class="row">
+
+          <div class="col-xs-6 col-md-4" id="profile-4">
+              <h2></h2>
+              <div class="float-left"></div>
+              <h3>Consultant, Health Practitionere</h3>
+              <img class="profile-image" src="images/testimonial-6.jpg" alt="Profile Image">
+              <h4>Louisa Knowles, MA, LMHC</h4>
+          </div>
+
+          <div class="clear-right">
+              <h5>Credentials</h5>
+              <ul>
+                  <li>Licensed Mental Health Counselor</li>
+                  <li>Certified DBT Practitioner</li>
+                  <li>Certified in EMDR</li>
+              </ul>
+          </div>
+
+          <div class="clear-both">
+              <p>
+                  Louisa has trained extensively in the use of mindfulness and psychotherapy.
+                  She has
+                  completed an internship at Jon Kabat-Zinn's "Mindfulness Based Stress
+                  Management
+                  Program" at UMass Medical Center. She has found that Mindfulness combined
+                  with
+                  psychotherapy to be an effective path to move beyond our negative
+                  self-concepts and
+                  fears, and to gradually experience our essential wholeness. She is also
+                  trained in
+                  cognitive and behavior therapy. For sexual abuse and other trauma work, she
+                  is a
+                  certified practitioner of DBT (dialectical behavior therapy) and EMDR.
+              </p>
+
+          </div>
+
+          <div class="col-xs-6 col-md-4" id="profile-5">
+              <h2></h2>
+              <div class="float-left"></div>
+              <h3> Mental Health Counselor </h3>
+              <img class="profile-image" src="images/testimonial-6.jpg" alt="Profile Image">
+              <h4>Mary Johnson, MA, LMHC</h4>
+          </div>
+
+          <div class="clear-right">
+              <h5>Credentials</h5>
+              <ul>
+                  <li>Licensed Mental Health Counselor</li>
+                  <li>B.A. Assumption College</li>
+                  <li>Experiemce Mental Health Counseler</li>
+              </ul>
+          </div>
+
+          <div class="clear-both">
+              <p>Mary is a Master's level therapist who graduated from Assumption College and
+                  has over 20
+                  years of counseling experience. She has been licensed as a mental health
+                  counselor for
+                  12 years and specializes in the treatment of clients and/or families
+                  suffering from the
+                  effects of substance abuse. Experience includes individual and group
+                  treatment,
+                  supervision and training in the area of both mental health and addiction
+                  issues.</p>
+              <p>
+                  Mary has also conducted court evaluations, performed crisis intervention
+                  services, and
+                  sees clients with chronic mental illness, trauma histories, and
+                  dual-diagnosis.
+                  Presently she is in private practice and is a provider for most health
+                  insurance
+                  companies, including HMOs.
+              </p>
+          </div>
 
 
-    <div class="card" id="card3" style="width: 18rem">
-      <img src="svg\Avatar3.svg" class="card-img-top" alt="..." />
-      <div class="card-body">
-        <h5 class="card-title">Card title 03</h5>
-        <p class="card-text">
-          Some quick example text to build on the card title and make up the bulk of the
-          card's content.
-        </p>
-      </div>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">Cras justo odio</li>
-        <li class="list-group-item">Dapibus ac facilisis in</li>
-        <li class="list-group-item">Vestibulum at eros</li>
-      </ul>
-      <div class="card-body">
-        <a href="#" class="card-link">Card link</a>
-        <a href="#" class="card-link">Another link</a>
-      </div>
-    </div>
+          <div class="col-xs-6 col-md-4" id="profile-6">
+              <h2></h2>
+              <div class="float-left"></div>
+              <h3>Office Manager & Coordinator</h3>
+              <img class="profile-image" src="images/testimonial-6.jpg" alt="Profile Image">
+              <h4>Ginny Maher-Cooper</h4>
+          </div>
 
-    <div class="card" id="card4" style="width: 18rem">
-      <img src="svg\Avatar4.svg" class="card-img-top" alt="..." />
-      <div class="card-body">
-        <h5 class="card-title">Card title 04</h5>
-        <p class="card-text">
-          Some quick example text to build on the card title and make up the bulk of the
-          card's content.
-        </p>
-      </div>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">Cras justo odio</li>
-        <li class="list-group-item">Dapibus ac facilisis in</li>
-        <li class="list-group-item">Vestibulum at eros</li>
-      </ul>
-      <div class="card-body">
-        <a href="#" class="card-link">Card link</a>
-        <a href="#" class="card-link">Another link</a>
-      </div>
-    </div>
+          <div class="clear-right">
+              <h5>Credentials</h5>
+              <ul>
+                  <li>Credential #1</li>
+                  <li>Credential #2</li>
+                  <li>Credential #3</li>
+              </ul>
+          </div>
 
-    <div class="card" id="card5" style="width: 18rem">
-      <img src="svg\Avatar5.svg" class="card-img-top" alt="..." />
-      <div class="card-body">
-        <h5 class="card-title">Card title 05</h5>
-        <p class="card-text">
-          Some quick example text to build on the card title and make up the bulk of the
-          card's content.
-        </p>
+          <div class="clear-both">
+              <p> Add professional profile description: The passage is attributed to an
+                  unknown typesetter
+                  in the 15th century who is thought to have scrambled parts of Cicero's De
+                  Finibus
+                  Bonorum et Malorum for use in a type specimen book. Our gracious office
+                  manager who may
+                  be reached at (508) 752-5880 exstension 19.</p>
+          </div>
+        </div>
       </div>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">Cras justo odio</li>
-        <li class="list-group-item">Dapibus ac facilisis in</li>
-        <li class="list-group-item">Vestibulum at eros</li>
-      </ul>
-      <div class="card-body">
-        <a href="#" class="card-link">Card link</a>
-        <a href="#" class="card-link">Another link</a>
-      </div>
-    </div>
-
-
-    <div class="card" id="card6" style="width: 18rem">
-      <img src="svg\Avatar6.svg" class="card-img-top" alt="..." />
-      <div class="card-body">
-        <h5 class="card-title">Card title 06</h5>
-        <p class="card-text">
-          Some quick example text to build on the card title and make up the bulk of the
-          card's content.
-        </p>
-      </div>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">Cras justo odio</li>
-        <li class="list-group-item">Dapibus ac facilisis in</li>
-        <li class="list-group-item">Vestibulum at eros</li>
-      </ul>
-      <div class="card-body">
-        <a href="#" class="card-link">Card link</a>
-        <a href="#" class="card-link">Another link</a>
-      </div>
-    </div>
-    <div style="clear: both;"></div>
-    <!-- card profile description template
-    
-                  <div class="card" style="width: 18rem">
-                    <img
-                      src="https://mdbootstrap.com/img/new/standard/city/062.jpg"
-                      class="card-img-top"
-                      alt="..."
-                    />
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">
-                        Some quick example text to build on the card title and make up the bulk of the
-                        card's content.
-                      </p>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                      <li class="list-group-item">Cras justo odio</li>
-                      <li class="list-group-item">Dapibus ac facilisis in</li>
-                      <li class="list-group-item">Vestibulum at eros</li>
-                    </ul>
-                    <div class="card-body">
-                      <a href="#" class="card-link">Card link</a>
-                      <a href="#" class="card-link">Another link</a>
-                    </div>
-                  </div>
--->
-
   </div>
+</div>
+
   <!-- profile cards end-->
+
+<br>
 
     <!-- Second Text body starts-->
     <div class="container">
