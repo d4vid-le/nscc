@@ -1,0 +1,150 @@
+
+    Routing
+    Visitor access
+    Forms
+        Setup
+        Spam filters
+        Submissions
+        Notifications
+        Troubleshooting tips
+        Usage & billing
+    Functions
+    Large Media
+    Partner add-ons
+    CLI
+    API
+    Accounts & billing
+    Get help 
+
+Contact
+
+    Community Forum
+    Contact Support 
+
+On this page
+
+    HTML forms
+        Submit HTML forms with AJAX 
+    JavaScript forms
+        Work with JavaScript-rendered forms
+        Submit JavaScript-rendered forms with AJAX 
+    Success messages
+    File uploads
+    More Forms resources 
+
+Forms setup
+
+Netlify comes with built-in form handling that’s enabled by default. Our build bots do it by parsing your HTML files directly at deploy time, so there’s no need for you to make an API call or include extra JavaScript on your site.
+#
+HTML forms
+
+Code an HTML form into any page on your site, add data-netlify="true" or a netlify attribute to the <form> tag, and you can start receiving submissions in your Netlify site admin panel.
+
+Your form’s name attribute determines what we call the form in the Netlify app interface. If you have more than one form on a site, each form should have a different name attribute.
+
+Here’s an example:
+
+<form name="contact" method="POST" data-netlify="true">
+  <p>
+    <label>Your Name: <input type="text" name="name" /></label>   
+  </p>
+  <p>
+    <label>Your Email: <input type="email" name="email" /></label>
+  </p>
+  <p>
+    <label>Your Role: <select name="role[]" multiple>
+      <option value="leader">Leader</option>
+      <option value="follower">Follower</option>
+    </select></label>
+  </p>
+  <p>
+    <label>Message: <textarea name="message"></textarea></label>
+  </p>
+  <p>
+    <button type="submit">Send</button>
+  </p>
+</form>
+
+When Netlify bots parse the static HTML for a form you’ve added, they automatically strip the data-netlify="true" or netlify attribute from the <form> tag and inject a hidden input named form-name. In the resulting HTML that’s deployed, the data-netlify="true" or netlify attribute is gone, and the hidden form-name input’s value matches the name attribute of <form> like this:
+
+<input type="hidden" name="form-name" value="contact">
+
+#
+Submit HTML forms with AJAX
+
+You don’t have to, but you can submit static HTML forms using AJAX.
+
+A static HTML form submitted this way must have data-netlify=true or a netlify attribute inside its <form> tag.
+
+Here’s an AJAX form submission example using the fetch API for a static HTML form:
+
+document.querySelector("form").addEventListener("submit", handleSubmit);
+
+const handleSubmit = (e) => {
+  e.preventDefault()
+  let myForm = document.getElementById('pizzaOrder');
+  let formData = new FormData(myForm)
+  fetch('/', {
+    method: 'POST',
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams(formData).toString()
+  }).then(() => console.log('Form successfully submitted')).catch((error) =>
+    alert(error))
+}
+
+Note that the body of the AJAX request must be URL-encoded. In the above example, the form is passed to a FormData constructor. That object is then encoded using the URLSearchParams constructor and converted to a string. Netlify forms do not support JSON form data at this time.
+#
+JavaScript forms
+
+You don’t need to include extra JavaScript on your site to use Netlify Forms. But, if you want to, you can use JavaScript to render a form client-side. You can also submit JavaScript-rendered forms over AJAX.
+#
+Work with JavaScript-rendered forms
+
+Our buildbots find your forms by parsing the HTML of your site when the build completes. This means that if you’re using JavaScript to render a form client-side, our buildbots won’t find it in the pre-built files. You can work around this:
+
+    Create a hidden HTML form with the data-netlify="true" attribute or a netlify attribute and input fields with name attributes to match the inputs of your JavaScript-rendered form. You need to apply the same work around if you want to use our reCAPTCHA 2 integration, and create a div element in the hidden HTML with the data-netlify-recaptcha="true" attribute.
+
+    Add a hidden input to the JavaScript-rendered form or JSX form:
+
+    <input type="hidden" name="form-name" value="name_of_my_form" />
+
+You can also find related tutorials on our blog:
+
+    How to Integrate Netlify’s Form Handling in a React App
+    How to Integrate Netlify forms in a Vue App
+
+While the two articles are fairly framework-specific, the code demonstrates how to prerender forms when working with them in a web application.
+#
+Submit JavaScript-rendered forms with AJAX
+
+To submit a JavaScript-rendered form built with a framework like Gatsby or Nuxt, you can send an AJAX POST request to any path on your site. The request should include the header "Content-Type": "application/x-www-form-urlencoded", and you need a function to URL-encode your form data. If you haven’t added a hidden form-name input to your JavaScript-rendered form, you need to send a form-name attribute in the AJAX POST request body.
+
+Here’s an AJAX form submission code sample using the fetch API for a JavaScript-rendered form. It uses Gatsby’s navigate function to redirect to a custom page on form submission success.
+
+function encode(data) {
+    return Object.keys(data)
+        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+        .join("&")
+  }
+
+const handleSubmit = (event) => {
+  event.preventDefault()
+  fetch("/", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: encode({
+      "form-name": event.target.getAttribute("name"),
+      ...name
+    })
+  }).then(() => navigate("/thank-you/")).catch(error => alert(error))
+}
+
+return (
+  <form data-netlify="true" name="pizzaOrder" method="post" onSubmit={handleSubmit}>
+    <input type="hidden" name="form-name" value="pizzaOrder" />
+    <label>What order did the pizza give to the pineapple?
+      <input name="order" type="text" onChange={handleChange} />
+    </label>
+    <input type="submit"/>
+  </form>
+)
