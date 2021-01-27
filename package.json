@@ -1,31 +1,42 @@
 {
-  "name": "nscc",
+  "name": "gulp",
   "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
-  "dependencies": {
-    "cssnano": "^4.1.10",
-    "fsevents": "^1.2.13",
-    "gulp": "^4.0.2",
-    "gulp-open": "^3.0.1",
-    "gulp-concat": "^2.6.1",
-    "gulp-connect": "^5.7.0",
-    "gulp-replace": "^1.0.0",
-    "gulp-uglify": "^3.0.2",
-    "gulp-sass": "^4.1.0"
-  },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "description":  "Gulp 4",
+  "main": "gulpfile.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/d4vid-le/nscc.git"
+    "url": "git+https://github.com/thecodercoder/frontend-boilerplate.git"
   },
-  "author": "",
+  "keywords": [
+    "gulp",
+    "boilerplate",
+    "html",
+    "css",
+    "javascript"
+  ],
+  "author": "@thecodercoder",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/d4vid-le/nscc/issues"
+    "url": "https://github.com/thecodercoder/frontend-boilerplate/issues"
   },
-  "homepage": "https://github.com/d4vid-le/nscc#readme"
+  "homepage": "https://github.com/thecodercoder/frontend-boilerplate#readme",
+  "devDependencies": {
+    "autoprefixer": "^9.7.0",
+    "cssnano": "^4.1.10",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-replace": "^1.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2"
+  },
+  "dependencies": {
+    "fsevents": "^1.2.13",
+    "gulp-connect": "^5.7.0",
+    "gulp-open": "^3.0.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
 }
