@@ -1,0 +1,639 @@
+/*****************************/
+/* 1. Min-width width 768px
+    General Styles
+    Navigation
+    Header
+    Testimonials
+    Features
+    Details Lightboxes
+    Screenshots
+    Contact
+    Extra Pages */
+
+/* 2. Min-width width 992px
+    Navigation
+    Header
+    Testimonials
+    Features
+    Videos
+    Details 1
+    Details 2
+    Details Lightboxes
+    Downloads
+    Statistics
+    Extra Pages */
+
+/* 3. Min-width width 1200px
+    Navigation 
+    General Styles
+    Header
+    Features
+    Min-width width 1200px
+    Details 2 
+    Download 
+    Footer 
+    Extra Pages  
+/*****************************/
+
+/* Min-width width 768px */
+@media (min-width: 768px) {
+
+    /* General Styles */
+    .p-heading {
+        width: 85%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    h1 {
+        font: 700 3.25rem/3.75rem "Montserrat", sans-serif;
+        /* color: #f1f1f8; */
+        color: #000;
+    }
+
+    /* end of general styles */
+
+
+    /* Navigation */
+    .navbar-custom {
+        padding: 2.125rem 1.5rem 2.125rem 2rem;
+        box-shadow: none;
+        background: solid;
+    }
+
+    .navbar-custom .navbar-brand .logo-text {
+        color: rgb(0, 0, 0);
+    }
+
+    .navbar-custom .navbar-nav {
+        margin-top: 0;
+    }
+
+    .navbar-custom .nav-item .nav-link {
+        padding: 0.25rem 0.75rem 0.25rem 0.75rem;
+        color: rgb(0, 0, 0);
+    }
+
+    .navbar-custom .nav-item .nav-link:hover,
+    .navbar-custom .nav-item .nav-link.active {
+        color: #6b6b6b;
+    }
+
+    .navbar-custom.top-nav-collapse {
+        padding: 0.5rem 1.5rem 0.5rem 2rem;
+        box-shadow: 0 0.0625rem 0.375rem 0 rgba(0, 0, 0, 0.1);
+        background-color: #e2e2e2f8;
+    }
+
+    .navbar-custom.top-nav-collapse .navbar-brand.logo-text {
+        color: rgb(0, 0, 0);
+    }
+
+    .navbar-custom.top-nav-collapse .nav-item .nav-link {
+        color: rgb(0, 0, 0);
+    }
+
+    .navbar-custom.top-nav-collapse .nav-item .nav-link:hover,
+    .navbar-custom.top-nav-collapse .nav-item .nav-link.active {
+        color: #000000;
+    }
+
+    .navbar-custom .dropdown-menu {
+        box-shadow: 0 0.25rem 0.375rem 0 rgba(0, 0, 0, 0.03);
+    }
+
+    .navbar-custom .dropdown-item {
+        padding-top: 0.25rem;
+        padding-bottom: 0.25rem;
+    }
+
+    .navbar-custom .dropdown-items-divide-hr {
+        width: 84%;
+    }
+
+    /* end of navigation */
+
+
+    /* Header */
+    .header .header-content {
+        padding-top: 11rem;
+    }
+
+    /* end of header */
+
+
+    /* Testimonials */
+    .slider-1 .swiper-button-prev {
+        left: 1rem;
+        width: 1.375rem;
+        background-size: 1.375rem 2.125rem;
+    }
+
+    .slider-1 .swiper-button-next {
+        right: 1rem;
+        width: 1.375rem;
+        background-size: 1.375rem 2.125rem;
+    }
+
+    /* end of testimonials */
+
+
+    /* Features */
+    .tabs .card .card-icon {
+        width: 4.5rem;
+        height: 4.5rem;
+    }
+
+    .tabs .card .card-icon .fas,
+    .tabs .card .card-icon .far {
+        font-size: 2.25rem;
+        line-height: 4.5rem;
+    }
+
+    .tabs #tab-1 .card.left-pane .text-wrapper {
+        width: 85%;
+    }
+
+    .tabs #tab-2 img {
+        margin-bottom: 0;
+    }
+
+    .tabs #tab-2 .text-area {
+        margin-top: 0;
+    }
+
+    .tabs #tab-2 .icon-cards-area .card {
+        display: inline-block;
+        width: 44%;
+        margin-right: 2.5rem;
+        vertical-align: top;
+    }
+
+    .tabs #tab-2 div.card:nth-child(2n+2) {
+        margin-right: 0;
+    }
+
+    .tabs #tab-3 .text-area {
+        margin-bottom: 0;
+    }
+
+    .tabs #tab-3 .icon-cards-area .card {
+        display: inline-block;
+        width: 44%;
+        margin-right: 2.5rem;
+        vertical-align: top;
+    }
+
+    .tabs #tab-3 div.card:nth-child(2n+2) {
+        margin-right: 0;
+    }
+
+    .tabs #tab-3 img {
+        margin-bottom: 0;
+    }
+
+    /* end of features */
+
+
+    /* Details Lightboxes */
+    .lightbox-basic {
+        padding: 3rem 3rem;
+    }
+
+    /* end of details lightboxes */
+
+
+    /* Screenshots */
+    .slider-2 .swiper-button-prev {
+        width: 1.375rem;
+        background-size: 1.375rem 2.125rem;
+    }
+
+    .slider-2 .swiper-button-next {
+        width: 1.375rem;
+        background-size: 1.375rem 2.125rem;
+    }
+
+    /* end of screenshots */
+
+
+    /* Contact */
+    .form .list-unstyled li {
+        display: inline-block;
+        margin-right: 0.5rem;
+        margin-left: 0.5rem;
+    }
+
+    .form .list-unstyled .address {
+        display: block;
+    }
+
+    /* end of contact */
+
+
+    /* Extra Pages */
+    .ex-header {
+        padding-top: 11rem;
+        padding-bottom: 9rem;
+    }
+
+    .ex-basic-2 .text-container.dark {
+        padding: 2.5rem 3rem 2rem 3rem;
+    }
+
+    .ex-basic-2 .text-container.column {
+        width: 90%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    /* end of extra pages */
+}
+
+/* end of min-width width 768px */
+
+
+/* Min-width width 992px */
+@media (min-width: 992px) {
+
+    /* Navigation */
+    .navbar-custom .social-icons {
+        display: block;
+        margin-left: 0.5rem;
+    }
+
+    .navbar-custom .fa-stack {
+        margin-bottom: 0.1875rem;
+        margin-left: 0.375rem;
+        font-size: 0.75rem;
+    }
+
+    .navbar-custom .fa-stack-2x {
+        color: #0400f3;
+        transition: all 0.2s ease;
+    }
+
+    .navbar-custom .fa-stack-1x {
+        color: #fff;
+        transition: all 0.2s ease;
+    }
+
+    .navbar-custom .fa-stack:hover .fa-stack-2x {
+        color: #fff;
+    }
+
+    .navbar-custom .fa-stack:hover .fa-stack-1x {
+        color: #001aff;
+    }
+
+    /* end of navigation */
+
+
+    /* General Styles */
+    .p-heading {
+        width: 65%;
+    }
+
+    /* end of general styles */
+
+
+    /* Header */
+    .header .header-content {
+        padding-top: 13rem;
+        padding-bottom: 10rem;
+        text-align: left;
+    }
+
+    .header .text-container {
+        margin-top: 6.5rem;
+    }
+
+    /* end of header */
+
+
+    /* Features */
+    .tabs .card-body {
+        padding: 1rem 0 1.5rem 0;
+    }
+
+    .tabs #tab-1 .card.left-pane {
+        text-align: right;
+    }
+
+    .tabs #tab-1 .card.left-pane .text-wrapper,
+    .tabs #tab-1 .card.right-pane .text-wrapper {
+        width: 68%;
+    }
+
+    .tabs #tab-1 .card.left-pane .card-icon {
+        float: none;
+        margin-right: 0;
+        margin-left: 1rem;
+    }
+
+    .tabs #tab-1 img {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .tabs #tab-2 .icon-cards-area {
+        margin-top: 2.25rem;
+    }
+
+    .tabs #tab-2 .icon-cards-area .card {
+        width: 45%;
+        margin-right: 3.5rem;
+    }
+
+    .tabs #tab-2 .icon-cards-area .card p {
+        margin-bottom: 0.5rem;
+    }
+
+    .tabs #tab-3 .icon-cards-area .card {
+        width: 45%;
+        margin-right: 3.5rem;
+    }
+
+    .tabs #tab-3 .icon-cards-area .card p {
+        margin-bottom: 0.5rem;
+    }
+
+    /* end of features */
+
+
+    /* Video */
+    .basic-1 .image-container {
+        max-width: 53.125rem;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    /* end of video */
+
+
+    /* Details 1 */
+    .basic-2 img {
+        margin-bottom: 0;
+    }
+
+    .basic-2 .text-container {
+        margin-top: 2.625rem;
+    }
+
+    /* end of details 1 */
+
+
+    /* Details 2 */
+    .basic-3 .text-container {
+        margin-top: 2.5rem;
+        margin-bottom: 0;
+    }
+
+    /* end of details 2 */
+
+
+    /* Details Lightboxes */
+    .lightbox-basic img {
+        margin-bottom: 0;
+        margin-left: 0;
+    }
+
+    .lightbox-basic h3 {
+        margin-top: 0.25rem;
+    }
+
+    /* end of details lightboxes */
+
+
+    /* Screenshots */
+    .slider-2 .swiper-container {
+        width: 92%;
+    }
+
+    /* end of screenshots */
+
+
+    /* Download */
+    .basic-4 {
+        padding-top: 6.75rem;
+    }
+
+    .basic-4 .text-container {
+        margin-top: 7rem;
+        margin-bottom: 0;
+        text-align: left;
+    }
+
+    /* end of download */
+
+
+    /* Statistics */
+    .counter {
+        padding-top: 6rem;
+        padding-bottom: 4.5rem;
+    }
+
+    .counter #counter .cell {
+        width: 8rem;
+        margin-right: 2.5rem;
+        margin-left: 2.5rem;
+    }
+
+    .counter #counter .counter-value {
+        font: 700 4.25rem/4.5rem "Montserrat", sans-serif;
+    }
+
+    /* end of statistics */
+
+
+    /* Extra Pages */
+    .ex-header h1 {
+        width: 80%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .ex-basic-2 {
+        padding-bottom: 5rem;
+    }
+
+    .ex-basic-2 .text-container.column {
+        margin-bottom: 0;
+    }
+
+    /* end of extra pages */
+}
+
+/* end of min-width width 992px */
+
+
+/* Min-width width 1200px */
+@media (min-width: 1200px) {
+
+    /* Navigation */
+    .navbar-custom {
+        padding: 2.125rem 5rem 2.125rem 5rem;
+        background-color: #e2e2e2;
+    }
+
+    .navbar-custom.top-nav-collapse {
+        padding: 0.5rem 5rem 0.5rem 5rem;
+    }
+
+    /* end of navigation */
+
+
+    /* General Styles */
+    .p-heading {
+        width: 44%;
+    }
+
+    /* end of general styles */
+
+
+    /* Header */
+    .header .text-container {
+        margin-top: 7.5rem;
+        margin-left: 2.5rem;
+    }
+
+    .header .image-container {
+        margin-left: 3rem;
+    }
+
+    /* end of header */
+
+
+    /* Features */
+    .tabs {
+        padding-bottom: 6.5rem;
+    }
+
+    .tabs #tab-1 .card.first {
+        margin-top: 4.25rem;
+    }
+
+    .tabs #tab-1 .card {
+        margin-bottom: 0.75rem;
+    }
+
+    .tabs #tab-1 .card.left-pane .text-wrapper,
+    .tabs #tab-1 .card.right-pane .text-wrapper {
+        width: 73%;
+    }
+
+    .tabs #tab-1 img {
+        margin-top: 0;
+    }
+
+    .tabs #tab-2 .container {
+        padding-right: 2.5rem;
+        padding-left: 2.5rem;
+    }
+
+    .tabs #tab-2 .text-area {
+        margin-top: 1.5rem;
+        margin-right: 1rem;
+        margin-left: 1rem;
+    }
+
+    .tabs #tab-2 .icon-cards-area {
+        margin-right: 1rem;
+        margin-left: 1rem;
+    }
+
+    .tabs #tab-2 .icon-cards-area .card {
+        margin-right: 3.875rem;
+    }
+
+    .tabs #tab-3 .container {
+        padding-right: 2.5rem;
+        padding-left: 2.5rem;
+    }
+
+    .tabs #tab-3 .icon-cards-area {
+        margin-top: 2rem;
+        margin-left: 1rem;
+    }
+
+    .tabs #tab-3 .icon-cards-area .card {
+        margin-right: 3.875rem;
+    }
+
+    .tabs #tab-3 .text-area {
+        margin-right: 1.5rem;
+        margin-left: 1rem;
+    }
+
+    /* end of features */
+
+
+  /* Min-width width 1200px */
+    .basic-2 .text-container {
+        margin-top: 4.5rem;
+        margin-left: 4rem;
+        margin-right: 1.5rem;
+    }
+
+    /* end of details 1 */
+
+
+    /* Details 2 */
+    .basic-3 .text-container {
+        margin-top: 4.5rem;
+        margin-right: 3.5rem;
+        margin-left: 2rem;
+    }
+
+    /* end of details 2 */
+
+
+    /* Download */
+    .basic-4 .text-container {
+        margin-top: 11rem;
+    }
+
+    .basic-4 .image-container {
+        margin-left: 3rem;
+    }
+
+    /* end of download */
+
+
+    /* Footer */
+    .footer .footer-col {
+        width: 90%;
+    }
+
+    .footer .footer-col.middle {
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .footer .footer-col.last {
+        margin-right: 0;
+        margin-left: auto;
+    }
+
+    /* end of footer */
+
+
+    /* Extra Pages */
+    .ex-header h1 {
+        width: 60%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .ex-basic-2 .form-container {
+        margin-left: 1.75rem;
+    }
+
+    .ex-basic-2 .image-container-small {
+        margin-left: 1.75rem;
+    }
+
+    /* end of extra pages */
+}
+
+/* end of min-width width 1200px */

@@ -1,7 +1,6 @@
 /* 
-   Author:
-   Created: 
-   Description: Custom Main JS file
+   Author: David Le
+   Description: Main JS file Vue.JS components form script import
 */
 /*
 (function($) {
@@ -16,3 +15,22 @@ $(window).on('load', function() {
     }
     hidePreloader();
     });  */
+
+
+
+    // Gobal files //
+
+    import {
+        Input,
+        Button,
+        Checkbox,
+        CheckboxGroup,
+        Radio,
+        Select,
+        Option,
+        Form,
+        FormItem,
+        FormBuilder
+      } from 'vfc'
+
+      // Gobal files end//
