@@ -73,6 +73,11 @@ Newton Square Counseling Center
     <link rel="stylesheet" href="dist/style.css">
     <script src="dist/all.js"></script>
     <!--End of CSS Styles -->
+    <style>
+        .bg-primary{
+            background-color: #e2e2e2 !important;
+        }
+    </style>
 </head>
 
 <body data-spy="scroll" data-target=".fixed-top">
@@ -222,97 +227,136 @@ Newton Square Counseling Center
 
     <br>
 
-    <br>
 
-    <!-- Contact -->
-    <div id="contact" class="form">
+
+
+
+
+
+    <section class="ftco-section">
+        <form name="contact" method="POST" data-netlify="true">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h2></h2>
-                    <p class="p-large">Lorem ipsum, or lipsum as it is sometimes known, is dummy
-                        text used in laying out print, graphic or web designs. The passage is
-                        attributed to an unknown typesetter in the 15th century who is thought to
-                        have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a
-                        type specimen book.</p>
-                    <ul class="list-unstyled li-space-lg">
-                        <li class="address">For further inquieries, please call or use the contact
-                            form below</li>
-                        <li><i class="fas fa-map-marker-alt"></i>22 Innovative, Boston, MA 94043, US
-                        </li>
-                        <li><i class="fas fa-phone"></i><a class="blue"
-                                href="tel:003024630820">(781) 333-3333</a></li>
-                        <li><i class="fas fa-envelope"></i><a class="blue"
-                                href="mailto:office@nscc.com">office@necc.com</a></li>
-                    </ul>
+            <div class="row justify-content-center">
+                <div class="col-md-6 text-center mb-5">
+                    <h2 class="heading-section">General Contact Form</h2>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-12">
+                    <div class="wrapper">
+                        <div class="row no-gutters">
+                            <div class="col-lg-8 col-md-7 order-md-last d-flex align-items-stretch">
+                                <div class="contact-wrap w-100 p-md-5 p-4">
+                                    <h3 class="mb-4">...</h3>
+                                    <div id="form-message-warning" class="mb-4"></div>
+                                    <div id="form-message-success" class="mb-4">
+                                        ...
+                                    </div>
+                                    <form method="POST" id="contactForm" name="contactForm"
+                                        class="contactForm">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="label" for="name">Full
+                                                        Name</label>
+                                                    <input type="text" class="form-control"
+                                                        name="name" id="name" placeholder="Name">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="label" for="email">Email
+                                                        Address</label>
+                                                    <input type="email" class="form-control"
+                                                        name="email" id="email" placeholder="Email">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label class="label"
+                                                        for="subject">Subject</label>
+                                                    <input type="text" class="form-control"
+                                                        name="subject" id="subject"
+                                                        placeholder="Subject">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label class="label" for="#">Message</label>
+                                                    <textarea name="message" class="form-control"
+                                                        id="message" cols="30" rows="4"
+                                                        placeholder="Message"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group">
 
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-            <div class="row">
-                <div class="col-lg-6 offset-lg-3">
 
-                    <!-- Contact Form -->
-                    <form id="contactForm" data-toggle="validator" data-focus="false">
-                        <div class="form-group">
-                            <input type="text" class="form-control-input" id="cname" required>
-                            <label class="label-control" for="cname">First Name</label>
-                            <div class="help-block with-errors"></div>
-
+                                               
+                                                    <input type="submit" value="Send Message"
+                                                        class="btn btn-outline-dark">
+                                                    <div class="submitting"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-5 d-flex align-items-stretch">
+                                <div class="info-wrap bg-primary w-100 p-md-5 p-4">
+                                    <h3>Let's get in touch</h3>
+                                    <p class="mb-4">We're open for any suggestion or just to have a
+                                        chat</p>
+                                    <div class="dbox w-100 d-flex align-items-start">
+                                        <div
+                                            class="icon d-flex align-items-center justify-content-center">
+                                            <span class="fa fa-map-marker"></span>
+                                        </div>
+                                        <div class="text pl-3">
+                                            <p><span>Address:</span> 198 West 21th Street, Suite 721
+                                                New York NY 10016</p>
+                                        </div>
+                                    </div>
+                                    <div class="dbox w-100 d-flex align-items-center">
+                                        <div
+                                            class="icon d-flex align-items-center justify-content-center">
+                                            <span class="fa fa-phone"></span>
+                                        </div>
+                                        <div class="text pl-3">
+                                            <p><span>Phone:</span> <a href="tel://1234567920">+ 1235
+                                                    2355 98</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="dbox w-100 d-flex align-items-center">
+                                        <div
+                                            class="icon d-flex align-items-center justify-content-center">
+                                            <span class="fa fa-paper-plane"></span>
+                                        </div>
+                                        <div class="text pl-3">
+                                            <p><span>Email:</span> <a
+                                                    href="mailto:info@yoursite.com">info@yoursite.com</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="dbox w-100 d-flex align-items-center">
+                                        <div
+                                            class="icon d-flex align-items-center justify-content-center">
+                                            <span class="fa fa-globe"></span>
+                                        </div>
+                                        <div class="text pl-3">
+                                            <p><span>Website</span> <a href="#">yoursite.com</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control-input" id="cname" required>
-                            <label class="label-control" for="cname">Last Name</label>
-                            <div class="help-block with-errors"></div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        </div>
+    </section>
 
-                        </div>
-
-                        <div class="form-group">
-                            <input type="email" class="form-control-input" id="cemail" required>
-                            <label class="label-control" for="cemail">Email</label>
-                            <div class="help-block with-errors"></div>
-                        </div>
-                        <div class="form-group">
-                            <input type="tel" for="phone" class="form-control-input" name="phone"
-                                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" id="phone" required>
-                            <label class="label-control" for="cemail">Phone Number</label>
-                            <div class="help-block with-errors"></div>
-
-                        </div>
-
-                        <!-- <div class="form-group">
-                        <label for="birthday">Birthday:</label>
-                        <input type="date" id="birthday" name="birthday"><br><br>
-                        </div> -->
-
-
-                        <div class="form-group">
-                            <textarea class="form-control-textarea" id="cmessage"
-                                required></textarea>
-                            <label class="label-control" for="cmessage">Your message</label>
-                            <div class="help-block with-errors"></div>
-                        </div>
-                        <div class="form-group checkbox">
-                            <input type="checkbox" id="cterms" value="Agreed-to-Terms" required>I
-                            have read and agree to
-                            Leno's stated conditions in <a href="privacy-policy.html">Privacy
-                                Policy</a> and <a href="terms-conditions.html">Terms Conditions</a>
-                            <div class="help-block with-errors"></div>
-                        </div>
-                        <div class="form-group">
-                            <button type="submit"
-                                class=" form-control-submit-button btn btn-outline-dark">SUBMIT
-                                MESSAGE</button>
-                        </div>
-                        <div class="form-message">
-                            <div id="cmsgSubmit" class="hidden text-center h3"></div>
-
-                    </form>
-                    <!-- end of contact form -->
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of form -->
-    <!-- end of contact -->
     <br>
     <div class="container">
         <br>
@@ -326,9 +370,12 @@ Newton Square Counseling Center
             </div>
         </section>
     </div>
-</div>
+    </div>
 
     <br>
+
+
+
 
 
     <!-- Footer -->
