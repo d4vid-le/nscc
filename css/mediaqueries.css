@@ -56,7 +56,10 @@
 
     /* Navigation */
     .navbar-custom {
-        padding: 2.125rem 1.5rem 2.125rem 2rem;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
         box-shadow: none;
         background: solid;
     }
