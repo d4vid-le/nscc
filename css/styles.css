@@ -39,7 +39,7 @@ Colors:
 
 ******************************************/
 html, body {
-  background-color: #ffffff;
+  
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 2 1'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='0' x2='0' y1='0' y2='1' gradientTransform='rotate(44,0.5,0.5)'%3E%3Cstop offset='0' stop-color='%23ffffff'/%3E%3Cstop offset='1' stop-color='%2391cbff'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='0' y1='0' x2='0' y2='1' gradientTransform='rotate(53,0.5,0.5)'%3E%3Cstop offset='0' stop-color='%232ea6d5' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%232ea6d5' stop-opacity='1'/%3E%3C/linearGradient%3E%3ClinearGradient id='c' gradientUnits='userSpaceOnUse' x1='0' y1='0' x2='2' y2='2'%3E%3Cstop offset='0' stop-color='%232ea6d5' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%232ea6d5' stop-opacity='1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x='0' y='0' fill='url(%23a)' width='2' height='1'/%3E%3Cg fill-opacity='0.44'%3E%3Cpolygon fill='url(%23b)' points='0 1 0 0 2 0'/%3E%3Cpolygon fill='url(%23c)' points='2 1 2 0 0 0'/%3E%3C/g%3E%3C/svg%3E");
   background-attachment: auto;
   background-size: cover;
@@ -729,16 +729,24 @@ input[type="checkbox"] {
 /*    04. Header     */
 /*********************/
 .header {
-  /* background: linear-gradient(to bottom right, rgba(72, 72, 212, 0), rgba(241, 104, 104, 0)), url('../images/header-background.jpg') center center no-repeat; */
-  background: linear-gradient(
-      to bottom right,
-      rgba(72, 72, 212, 0),
-      rgba(241, 104, 104, 0)
-    ),
-    url("") center center no-repeat;
-  background-color: #dddddd;
-  background-size: cover;
+	background: linear-gradient(to bottom right, rgba(72, 72, 212, 0), rgba(241, 104, 104, 0)), url('../images/home.jpg') center center no-repeat;
+	background-size: cover;
 }
+
+.header .header-content {
+	padding-top: 8.5rem;
+	padding-bottom: 7rem;
+	text-align: center;
+}
+
+.header .text-container {
+	margin-bottom: 3rem;
+}
+
+.header h1 {
+	margin-bottom: 1rem;
+}
+
 
 /*******************************/
 /*    Hero Image URL Above    */
@@ -1037,9 +1045,9 @@ input[type="checkbox"] {
 /*     09. Details 1     */
 /*************************/
 .basic-2 {
-  padding-top: 8rem;
+  padding-top: 6rem;
   padding-bottom: 3.5rem;
-  background-color: #e2e2e2;
+  /* background-color: #e2e2e2; */
 }
 
 .basic-2 img {
@@ -1060,7 +1068,7 @@ input[type="checkbox"] {
 .basic-3 {
   padding-top: 3.5rem;
   padding-bottom: 7.25rem;
-  background-color: #e2e2e2;
+  /* background-color: #e2e2e2; */
 }
 
 .basic-3 .text-container {
