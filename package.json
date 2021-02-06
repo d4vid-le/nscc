@@ -1,7 +1,7 @@
 {
   "name": "gulp",
   "version": "1.0.0",
-  "description":  "Gulp 4",
+  "description": "Gulp 4",
   "main": "gulpfile.js",
   "repository": {
     "type": "git",
@@ -32,6 +32,7 @@
     "gulp-uglify": "^3.0.2"
   },
   "dependencies": {
+    "css-doodle": "^0.14.2",
     "fsevents": "^1.2.13",
     "gulp-connect": "^5.7.0",
     "gulp-open": "^3.0.1"

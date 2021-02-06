@@ -1,23 +1,3 @@
-/* 
-   Author: David Le
-   Description: Custom Scripts.js file
-        
-        Preloader 
-        Navbar Scripts
-        Rotating Text - Morphtext
-        Card Slider - Swiper
-        Image Slider - Swiper 
-        Image Slider - Magnific Popup
-        Video Lightbox - Magnific Popup
-        Lightbox - Magnific Popup
-        Counter - CountTo
-        Form Fields Label
-        Contact Form
-        Privacy Form
-        Back To Top Button
-        Removes Long Focus On Buttons */
-
-
 (function($) {
     "use strict"; 
 	
