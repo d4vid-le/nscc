@@ -2,3 +2,26 @@
 @import "colors";
 @import "global";
 @import "typography";
+
+
+.App {
+    font-family: sans-serif;
+  }
+  .input-group {
+    margin-bottom: 10px;
+  }
+  .input-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  button {
+    border: none;
+    padding: 8px 24px;
+  }
+  .message {
+    margin-top: 20px;
+    font-weight: 600;
+  }
+  .message.error {
+    color: red;
+  }
