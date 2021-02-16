@@ -302,9 +302,9 @@ Newton Square Counseling Center
                                                     <div class="form-group">
 
                                                         <!--vistor tel-->
-                                                        <label for="tel" class="label" for="phone">Telephone</label>
+                                                        <label for="tel" class="label" for="phone">Phone</label>
 
-                                                        <input type="tel" id="phone" class="form-control" name="tel" placeholder="(123)456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                                                        <input type="tel" id="tel" class="form-control" name="tel" placeholder="(123)456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
 
                                                         <p><?php if (isset($tel_error)) echo $tel_error; ?></p>
 
@@ -326,10 +326,9 @@ Newton Square Counseling Center
                                                     <div class="form-group">
 
                                                         <!--vistor subject/title -->
+                                                        <label for="subject" id="subject" class="label" for="subject">Subject</label>
 
-                                                        <label class="label" for="title"></label>
-
-                                                        <input type="text" id="title" class="form-control" name="title" placeholder="Title" required>
+                                                        <input type="text" id="subject" class="form-control" name="subject" placeholder="Subject" required>
 
                                                     </div>
                                                 </div>
