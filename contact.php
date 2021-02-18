@@ -341,11 +341,12 @@ Newton Square Counseling Center
                                                         <textarea name="message" class="form-control" id="message" cols="30" rows="4" placeholder="Message" required></textarea>
 
                                                         <p><?php if (isset($message_error)) echo $message_error; ?></p>
-                                                        <input type="submit" name="submit" value="Submit">
+                                                        <input type="submit" name="submit" value="Send Message" class="btn btn-outline-dark">
 
+                                                        <div class="submitting"></div>
                                                         <?php
                                                         if (isset($_POST['submit']) && !isset($name_error) && !isset($subject_error) && !isset($email_error) && !isset($message_error)) {
-                                                            $to = 'youremail@addres.com'; // edit here
+                                                            $to = 'metapixels@outlook.com'; // edit here
                                                             $body = " Name: $name\n E-mail: $email\n Message:\n $message";
                                                             if (mail($to, $subject, $body)) {
                                                                 echo '<p style="color: green">Message sent</p>';
@@ -357,13 +358,10 @@ Newton Square Counseling Center
 
                                                     </div>
                                                 </div>
-                                                <div class="col-md-12">
+                                                <div class=" col-md-12">
                                                     <div class="form-group">
 
-                                                        <!-- Submit -->
-                                                        <input type="submit" value="Send Message" class="btn btn-outline-dark">
 
-                                                        <div class="submitting"></div>
 
                                                     </div>
                                                 </div>
