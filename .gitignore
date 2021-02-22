@@ -7,7 +7,5 @@ myapp/
 my-project/
 components/
 external styles.css/
-nscc-repo
-dist/
 # Local Netlify folder
 .netlify
