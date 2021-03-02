@@ -71,28 +71,133 @@ Newton Square Counseling Center
     <link rel="stylesheet" href="dist/style.css">
     <script src="dist/all.js"></script>
     <!--End of CSS Styles -->
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-188601839-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
 
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-        gtag('config', 'UA-188601839-1');
-    </script>
-    <!-- Gobal Site Tag Ends-->
+
+
+    <!-- CSS Inline Style Start-->
     <style>
-        .basic-1 {
-            padding-top: 2rem;
-            padding-left: 6rem;
-            padding-right: 6rem;
-            padding-bottom: 0rem;
-            background: url()
+p,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            display: block;
         }
+        /* CSS Notes 02/22/2021 --placing text over svg clip-path element over the html 
+
+
+        https://stackoverflow.com/questions/53949541/text-over-a-clip-path
+
+
+
+        */
+        
+        .basic-1 {
+            padding-top: 0rem;
+            padding-left: 2rem;
+            padding-right: 2rem;
+            padding-bottom: 0rem;
+        }
+        
+        .header-content {
+            background-image: url("https://cdn.glitch.com/6b8e7c56-9d38-4589-ac9c-41514c5d7aa0%2Fabout.png?v=1614641568293");
+            background-size: cover;
+            background-position: center;
+            padding: 5em 0 10em;
+        }
+        
+        .footer {
+            background-size: cover;
+            background-position: center;
+            padding: 5em 0 10em;
+        }
+        
+        .bg-container {
+            width: 100%;
+            text-align: center;
+            position: relative;
+        }
+        
+        .background {
+            clip-path: url(#bg-image);
+            aspect-ratio: 1 / 1;
+            background-repeat: no-repeat;
+        }
+        
+        .leaf1,
+        .leaf2,
+        .leaf3 {
+            position: absolute;
+            filter: drop-shadow(22px -12px 7px rgba(0, 0, 0, 0.5));
+        }
+        
+        .leaf1 {
+            top: 40%;
+            left: 36%;
+            width: 10%;
+            transform: rotate(100deg);
+            animation: leaf1 5s infinite alternate-reverse;
+        }
+        
+        .leaf2 {
+            top: 45%;
+            left: 30%;
+            width: 20%;
+            transform: rotate(110deg);
+            animation: leaf2 2s infinite alternate-reverse ease-in-out;
+        }
+        
+        .leaf3 {
+            top: 37%;
+            left: 60%;
+            width: 6%;
+            height: 6%;
+            transform: rotate(210deg);
+            filter: drop-shadow(-22px -12px 7px rgba(0, 0, 0, 0.5));
+            animation: leaf3 8s infinite alternate-reverse ease-in-out;
+        }
+        
+        animation: leaf3 8s infinite alternate-reverse ease-in-out;
+    }
+    @keyframes leaf1 {
+        from {
+            transform: translateY(20px) rotate(100deg);
+        }
+        
+        to {
+            transform: translateY(0) rotate(120deg);
+        }
+    }
+    @keyframes leaf2 {
+        from {
+            transform: translateY(0) rotate(110deg);
+        }
+        
+        to {
+            transform: translateY(10px) rotate(90deg);
+        }
+    }
+    @keyframes leaf3 {
+        from {
+            transform: translateY(30px) rotate(210deg);
+        }
+        
+        to {
+            transform: translateY(0) rotate(240deg);
+        }
+    }
+}
     </style>
+    <!-- CSS Inline Style Start-->
 </head>
+
+
+
+
+
+
 
 <body data-spy="scroll" data-target=".fixed-top">
     <!-- Preloader -->
@@ -234,9 +339,10 @@ Newton Square Counseling Center
     <!-- end of header -->
 
     <br>
-    <div class="basic-1" <div class="container">
-        <div id="details" class="basic-2">
-            <div class="row">
+
+    <div id="details" class="basic-2">
+        <div class="row">
+            <div class="basic-1" class="container">
                 <div class="col-lg-10 offset-lg-1">
                     <div class="text-container">
                         <h3>Add Title</h3>
@@ -255,15 +361,16 @@ Newton Square Counseling Center
                             amet nulla facilisi morbi tempus iaculis. Donec enim diam vulputate ut pharetra sit amet aliquam. Tristique risus nec feugiat in fermentum posuere urna. Ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at. Nec
                             sagittis aliquam malesuada bibendum arcu vitae elementum curabitur. Dignissim enim sit amet venenatis urna cursus. Sit amet consectetur adipiscing elit duis tristique. Parturient montes nascetur ridiculus mus. </p>
                     </div>
-                    <!-- end of text-container -->
-                </div>
+                </div <!-- end of text-container -->
             </div>
         </div>
-        <!-- end of row -->
+    </div>
+    <!-- end of row -->
     </div>
     <!-- end of container -->
     </div>
     <!-- end of ex-basic -->
+
     <!-- end of terms content -->
 
     <br>
@@ -278,38 +385,74 @@ Newton Square Counseling Center
                         <clipPath clipPathUnits="objectBoundingBox" id="bg-image">
                             <path
                                 d="M303.49,371.1l-.2-.511a.145.145,0,0,0-.188-.082l-.511.2a.145.145,0,0,0-.082.188l.2.511a.145.145,0,0,0,.188.082l.511-.2A.145.145,0,0,0,303.49,371.1Zm-.547.166a.079.079,0,0,1-.1-.045l-.109-.281a.079.079,0,0,1,.045-.1l.281-.109a.079.079,0,0,1,.1.045l.109.281a.079.079,0,0,1-.045.1Z"
-                                transform="translate(-302.5 -370.5)" fill="#fff" />
+                                transform="translate(-302.5 -370.5)" />
                         </clipPath>
+
                     </defs>
+
                 </svg>
-                <img class="leaf1" src="https://assets.codepen.io/2621168/leaf1.png" alt="leaf">
-                <img class="leaf2" src="https://cdn.glitch.com/ca63c19d-6cf6-4c9c-8463-f5a5e292ece2%2Fflower1.png?v=1612936081852" alt="leaf">
-                <img class="leaf3" src="https://assets.codepen.io/2621168/leaf3.png" alt="leaf">
-            </div>
-            <!-- Details 3 -->
-            <div id="details" class="basic-2">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <img class="img-fluid" src="images/walking.png" alt="alternative">
-                        </div>
-                        <!-- end of col -->
-                        <div class="col-lg-6">
-                            <div class="text-container">
-                                <h3>Cicero's De Finibus Bonorum</h3>
-                                <p>Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts
-                                    of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book.
-                                </p>
-                                <button type="button" class="btn btn-outline-dark">Button</button>
-                            </div>
-                            <!-- end of text-container -->
-                        </div>
-                        <!-- end of col -->
-                    </div>
+                <h3>Add Title</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nulla aliquet porttitor lacus luctus accumsan tortor posuere ac ut. Dui accumsan sit amet nulla. Et netus et malesuada
+                    fames ac turpis. Morbi tristique senectus et netus et malesuada fames ac. Commodo nulla facilisi nullam vehicula ipsum a arcu cursus. Consequat ac felis donec et odio. Nibh tellus molestie nunc non. Cras fermentum odio eu feugiat pretium
+                    nibh ipsum consequat. Gravida neque convallis a cras.</p>
+
+                <img class="leaf1" src="https://cdn.glitch.com/6b8e7c56-9d38-4589-ac9c-41514c5d7aa0%2Fleaf07.png?v=1614131462280" alt="leaf">
+                <img class="leaf2" src="https://cdn.glitch.com/6b8e7c56-9d38-4589-ac9c-41514c5d7aa0%2Fleaf05.png?v=1614131461942" alt="leaf">
+                <img class="leaf3" src="https://cdn.glitch.com/6b8e7c56-9d38-4589-ac9c-41514c5d7aa0%2Fleaf01.png?v=1614131461842" alt="leaf">
+
+                <div class="text-container">
+                    <h3>Add Title</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nulla aliquet porttitor lacus luctus accumsan tortor posuere ac ut. Dui accumsan sit amet nulla. Et netus et
+                        malesuada fames ac turpis. Morbi tristique senectus et netus et malesuada fames ac. Commodo nulla facilisi nullam vehicula ipsum a arcu cursus. Consequat ac felis donec et odio. Nibh tellus molestie nunc non. Cras fermentum odio
+                        eu feugiat pretium nibh ipsum consequat. Gravida neque convallis a cras.</p>
+
+                    <p>Felis bibendum ut tristique et egestas quis ipsum. Sed augue lacus viverra vitae congue eu consequat. Id semper risus in hendrerit. Volutpat diam ut venenatis tellus in metus vulputate eu scelerisque. Non tellus orci ac auctor. A cras
+                        semper auctor neque vitae tempus quam. Turpis egestas pretium aenean pharetra magna ac placerat. Amet nisl suscipit adipiscing bibendum. Nulla facilisi nullam vehicula ipsum a arcu cursus vitae. Nulla at volutpat diam ut venenatis
+                        tellus. Pulvinar pellentesque habitant morbi tristique senectus et netus et malesuada. Diam quis enim lobortis scelerisque fermentum dui faucibus in ornare. Eleifend mi in nulla posuere sollicitudin. Habitasse platea dictumst quisque
+                        sagittis purus sit amet. Morbi quis commodo odio aenean sed adipiscing diam donec adipiscing. Amet nulla facilisi morbi tempus iaculis urna. Amet nisl suscipit adipiscing bibendum est ultricies. Risus quis varius quam quisque.
+                        Ultrices gravida dictum fusce ut. Tellus orci ac auctor augue mauris.
+                    </p>
+
+                    <p>Non arcu risus quis varius quam quisque. Volutpat commodo sed egestas egestas fringilla. Vel risus commodo viverra maecenas. Augue interdum velit euismod in pellentesque massa placerat duis ultricies. Imperdiet dui accumsan sit amet
+                        nulla facilisi morbi tempus iaculis. Donec enim diam vulputate ut pharetra sit amet aliquam. Tristique risus nec feugiat in fermentum posuere urna. Ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at. Nec sagittis
+                        aliquam malesuada bibendum arcu vitae elementum curabitur. Dignissim enim sit amet venenatis urna cursus. Sit amet consectetur adipiscing elit duis tristique. Parturient montes nascetur ridiculus mus.
+                    </p>
                 </div>
+                <!-- end of text-container -->
             </div>
         </div>
-        <!-- end of row -->
+    </div>
+    <!-- end of row -->
+    </div>
+    <!-- end of container -->
+    </div>
+    <!-- end of ex-basic -->
+    </div>
+    <!-- end of terms content -->
+    <!-- Details 3 -->
+    <div id="details" class="basic-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <img class="img-fluid" src="images/walking.png" alt="alternative">
+                </div>
+                <!-- end of col -->
+                <div class="col-lg-6">
+                    <div class="text-container">
+                        <h3>Cicero's De Finibus Bonorum</h3>
+                        <p>Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's
+                            De Finibus Bonorum et Malorum for use in a type specimen book.
+                        </p>
+                        <button type="button" class="btn btn-outline-dark">Button</button>
+                    </div>
+                    <!-- end of text-container -->
+                </div>
+                <!-- end of col -->
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- end of row -->
 
     </div>
     <br>
@@ -471,6 +614,19 @@ Newton Square Counseling Center
         </script>
         <!-- Serviceworker Script-->
         <!--End of Scripts -->
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-188601839-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+            gtag('config', 'UA-188601839-1');
+        </script>
+        <!-- Gobal Site Tag Ends-->
 </body>
 
 </html>
