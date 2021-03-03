@@ -97,42 +97,42 @@ Colors:
     animation: leaf3 8s infinite alternate-reverse ease-in-out;
 }
 
-animation: leaf3 8s infinite alternate-reverse ease-in-out;
-
-}
 @keyframes leaf1 {
     from {
         transform: translateY(20px) rotate(100deg);
     }
-    
     to {
         transform: translateY(0) rotate(120deg);
     }
 }
+
 @keyframes leaf2 {
     from {
         transform: translateY(0) rotate(110deg);
     }
-    
     to {
         transform: translateY(10px) rotate(90deg);
     }
 }
+
 @keyframes leaf3 {
     from {
         transform: translateY(30px) rotate(210deg);
     }
-    
     to {
         transform: translateY(0) rotate(240deg);
     }
 }
 
+
 /******************************/
+
 
 /*     01. Buttons           */
 
+
 /******************************/
+
 .btn-solid-reg {
     display: inline-block;
     padding: 1.1875rem 2.125rem 1.1875rem 2.125rem;
@@ -144,11 +144,13 @@ animation: leaf3 8s infinite alternate-reverse ease-in-out;
     text-decoration: none;
     transition: all 0.2s;
 }
+
 .btn-solid-reg:hover {
     background-color: transparent;
     color: #000000;
     text-decoration: none;
 }
+
 .btn-solid-lg {
     display: inline-block;
     padding: 1.375rem 2.625rem 1.375rem 2.625rem;
@@ -160,20 +162,24 @@ animation: leaf3 8s infinite alternate-reverse ease-in-out;
     text-decoration: none;
     transition: all 0.2s;
 }
+
 .btn-solid-lg:hover {
     background-color: transparent;
     color: #000000;
     text-decoration: none;
 }
+
 .btn-solid-lg .fab {
     margin-right: 0.5rem;
     font-size: 1.25rem;
     line-height: 0;
     vertical-align: top;
 }
+
 .btn-solid-lg .fab.fa-google-play {
     font-size: 1rem;
 }
+
 .btn-outline-reg {
     display: inline-block;
     padding: 1.1875rem 2.125rem 1.1875rem 2.125rem;
@@ -189,11 +195,13 @@ animation: leaf3 8s infinite alternate-reverse ease-in-out;
     -ms-transition: all 0.2s;
     -o-transition: all 0.2s;
 }
+
 .btn-outline-reg:hover {
     background-color: #000000;
     color: #fff;
     text-decoration: none;
 }
+
 .btn-outline-lg {
     display: inline-block;
     padding: 1.375rem 2.625rem 1.375rem 2.625rem;
@@ -205,11 +213,13 @@ animation: leaf3 8s infinite alternate-reverse ease-in-out;
     text-decoration: none;
     transition: all 0.2s;
 }
+
 .btn-outline-lg:hover {
     background-color: #000000;
     color: #fff;
     text-decoration: none;
 }
+
 .btn-outline-sm {
     display: inline-block;
     padding: 1rem 2.625rem 0.875rem 1.625rem;
@@ -221,23 +231,29 @@ animation: leaf3 8s infinite alternate-reverse ease-in-out;
     text-decoration: none;
     transition: all 0.2s;
 }
+
 .btn-outline-sm:hover {
     background-color: #000000;
     color: #fff;
     text-decoration: none;
 }
 
+
 /* 02. Form Group */
+
 .form-group {
     position: relative;
     margin-bottom: 1.25rem;
 }
+
 .form-group.has-error.has-danger {
     margin-bottom: 0.625rem;
 }
+
 .form-group.has-error.has-danger .help-block.with-errors ul {
     margin-top: 0.375rem;
 }
+
 .label-control {
     position: absolute;
     top: 0.87rem;
@@ -249,13 +265,16 @@ animation: leaf3 8s infinite alternate-reverse ease-in-out;
     transition: all 0.2s ease;
 }
 
+
 /* IE10+ hack to solve lower label text position compared to the rest of the browsers */
+
 @media screen and (-ms-high-contrast: active),
 screen and (-ms-high-contrast: none) {
     .label-control {
         top: 0.9375rem;
     }
 }
+
 .form-control-input:focus+.label-control,
 .form-control-input.notEmpty+.label-control,
 .form-control-textarea:focus+.label-control,
@@ -265,11 +284,11 @@ screen and (-ms-high-contrast: none) {
     font-size: 0.75rem;
     font-weight: 700;
 }
+
 .form-control-input,
 .form-control-select {
     display: block;
     /* needed for proper display of the label in Firefox, IE, Edge */
-    
     width: 100%;
     padding-top: 1.0625rem;
     padding-bottom: 0.0625rem;
@@ -283,13 +302,16 @@ screen and (-ms-high-contrast: none) {
     -webkit-appearance: none;
     /* removes inner shadow on form inputs on ios safari */
 }
+
 .form-control-select {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     height: 3rem;
 }
 
+
 /* IE10+ hack to solve lower label text position compared to the rest of the browsers */
+
 @media screen and (-ms-high-contrast: active),
 screen and (-ms-high-contrast: none) {
     .form-control-input {
@@ -297,7 +319,6 @@ screen and (-ms-high-contrast: none) {
         padding-bottom: 0.75rem;
         line-height: 1.75rem;
     }
-    
     .form-control-select {
         padding-top: 0.875rem;
         padding-bottom: 0.75rem;
@@ -305,9 +326,9 @@ screen and (-ms-high-contrast: none) {
         line-height: 2.125rem;
     }
 }
+
 select {
     /* you should keep these first rules in place to maintain cross-browser behavior */
-    
     -webkit-appearance: none;
     -moz-appearance: none;
     -ms-appearance: none;
@@ -318,29 +339,29 @@ select {
     background-repeat: no-repeat;
     outline: none;
 }
+
 select::-ms-expand {
     display: none;
     /* removes the ugly default down arrow on select form field in IE11 */
 }
+
 .form-control-textarea {
     display: block;
     /* used to eliminate a bottom gap difference between Chrome and IE/FF */
-    
     width: 100%;
     height: 8rem;
     /* used instead of html rows to normalize height between Chrome and IE/FF */
-    
     padding-top: 1.25rem;
     padding-left: 1.3125rem;
     border: 1px solid #9791ae;
     border-radius: 0.25rem;
     /*background-color: #413d52; */
-    
     background-color: #fff;
     color: #f1f1f8;
     font: 400 0.875rem/1.75rem "Open Sans", sans-serif;
     transition: all 0.2s;
 }
+
 .form-control-input:focus,
 .form-control-select:focus,
 .form-control-textarea:focus {
@@ -348,26 +369,32 @@ select::-ms-expand {
     outline: none;
     /* Removes blue border on focus */
 }
+
 .form-control-input:hover,
 .form-control-select:hover,
 .form-control-textarea:hover {
     border: 1px solid #f1f1f8;
 }
+
 .checkbox {
     font: 400 0.75rem/1.25rem "Open Sans", sans-serif;
 }
+
 input[type="checkbox"] {
     vertical-align: -15%;
     margin-right: 0.375rem;
 }
 
+
 /* IE10+ hack to raise checkbox field position compared to the rest of the browsers */
+
 @media screen and (-ms-high-contrast: active),
 screen and (-ms-high-contrast: none) {
     input[type="checkbox"] {
         vertical-align: -9%;
     }
 }
+
 .form-control-submit-button {
     display: inline-block;
     width: 100%;
@@ -380,12 +407,15 @@ screen and (-ms-high-contrast: none) {
     cursor: pointer;
     transition: all 0.2s;
 }
+
 .form-control-submit-button:hover {
     background-color: rgb(0, 0, 0);
     color: rgb(0, 0, 0);
 }
 
+
 /* Form Success And Error Message Formatting */
+
 #cmsgSubmit.h3.text-center.tada.animated,
 #pmsgSubmit.h3.text-center.tada.animated,
 #cmsgSubmit.h3.text-center,
@@ -395,77 +425,77 @@ screen and (-ms-high-contrast: none) {
     color: #707070;
     font: 400 1.125rem/1rem "Open Sans", sans-serif;
 }
+
 .help-block.with-errors .list-unstyled {
     color: #1100ff;
     font-size: 0.75rem;
     line-height: 1.125rem;
     text-align: left;
 }
+
 .help-block.with-errors ul {
     margin-bottom: 0;
 }
 
+
 /* end of form success and error message formatting */
 
+
 /* Form Success And Error Message Animation - Animate.css */
+
 @-webkit-keyframes tada {
     from {
         transform: scale3d(1, 1, 1);
     }
-    
     10%,
     20% {
         transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
     }
-    
     30%,
     50%,
     70%,
     90% {
         transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
     }
-    
     40%,
     60%,
     80% {
         transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
     }
-    
     to {
         transform: scale3d(1, 1, 1);
     }
 }
+
 @keyframes tada {
     from {
         transform: scale3d(1, 1, 1);
     }
-    
     10%,
     20% {
         transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
     }
-    
     30%,
     50%,
     70%,
     90% {
         transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
     }
-    
     40%,
     60%,
     80% {
         transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
     }
-    
     to {
         transform: scale3d(1, 1, 1);
     }
 }
+
 .tada {
     -webkit-animation-name: tada;
     animation-name: tada;
 }
+
 .animated {
     -webkit-animation-duration: 1s;
     animation-duration: 1s;
@@ -473,61 +503,70 @@ screen and (-ms-high-contrast: none) {
     animation-fill-mode: both;
 }
 
+
 /* end of form success and error message animation - Animate.css */
 
+
 /* Fade Animation For Image Slider - Magnific Popup */
+
 @-webkit-keyframes fadeIn {
     from {
         opacity: 0;
     }
-    
     to {
         opacity: 1;
     }
 }
+
 @keyframes fadeIn {
     from {
         opacity: 0;
     }
-    
     to {
         opacity: 1;
     }
 }
+
 .fadeIn {
     -webkit-animation: fadeIn 0.6s;
     animation: fadeIn 0.6s;
 }
+
 @-webkit-keyframes fadeOut {
     from {
         opacity: 1;
     }
-    
     to {
         opacity: 0;
     }
 }
+
 @keyframes fadeOut {
     from {
         opacity: 1;
     }
-    
     to {
         opacity: 0;
     }
 }
+
 .fadeOut {
     -webkit-animation: fadeOut 0.8s;
     animation: fadeOut 0.8s;
 }
 
+
 /* end of fade animation for image slider - magnific popup */
 
+
 /**************************/
+
 
 /*     03. Navigation       */
 
+
 /**************************/
+
 .navbar-custom {
     background-color: #ffffff;
     box-shadow: 0 0.0625rem 0.375rem 0 rgba(0, 0, 0, 0.1);
@@ -535,6 +574,7 @@ screen and (-ms-high-contrast: none) {
     transition: all 0.2s;
     position: absolute;
 }
+
 .navbar-custom .navbar-brand .brand-title {
     font: 1rem/1.2rem "Montserrat", sans-serif;
     color: #000;
@@ -543,6 +583,7 @@ screen and (-ms-high-contrast: none) {
     padding-left: 10px;
     padding-right: 10px;
 }
+
 .navbar-custom .navbar-brand .brand-title .brand-subtitle {
     padding-left: 2px;
     padding-right: 2px;
@@ -552,15 +593,18 @@ screen and (-ms-high-contrast: none) {
     margin-bottom: 1px;
     -webkit-backface-visibility: hidden;
 }
+
 .navbar-custom .navbar-brand .brand-subtitle {
     font: 800 0.7rem "Montserrat", sans-serif;
     color: rgb(92, 92, 92);
     letter-spacing: 0px;
     text-decoration: none;
 }
+
 .navbar-custom .navbar-nav {
     margin-top: 0.75rem;
 }
+
 .navbar-custom .nav-item .nav-link {
     padding: 0 0.75rem 0 0.75rem;
     color: rgb(0, 0, 0);
@@ -571,69 +615,80 @@ screen and (-ms-high-contrast: none) {
     -ms-transition: all 0.2s ease;
     -o-transition: all 0.2s ease;
 }
+
 .navbar-custom .nav-item .nav-link:hover,
 .navbar-custom .nav-item .nav-link.active {
     color: #a1a1a1;
 }
 
+
 /****************************/
+
 
 /*     04. Dropdown Menu   */
 
+
 /**************************/
+
 .navbar-custom .dropdown:hover>.dropdown-menu {
     display: block;
     /* this makes the dropdown menu stay open while hovering it */
-    
     min-width: auto;
     -webkit-animation: fadeDropdown 0.2s;
     animation: fadeDropdown 0.2s;
     /* required for the fade animation */
 }
+
 @-webkit-keyframes fadeDropdown {
     0% {
         opacity: 0;
     }
-    
     100% {
         opacity: 1;
     }
 }
+
 @keyframes fadeDropdown {
     0% {
         opacity: 0;
     }
-    
     100% {
         opacity: 1;
     }
 }
+
 .navbar-custom .dropdown-toggle:focus {
     /* removes dropdown outline on focus  */
-    
     outline: 0;
 }
+
 .navbar-custom .dropdown-menu {
     margin-top: 0;
     border: none;
     border-radius: 0.25rem;
     background-color: #e2e2e2;
 }
+
 .navbar-custom .dropdown-item {
     color: rgb(0, 0, 0);
     text-decoration: none;
 }
+
 .navbar-custom .dropdown-item:hover {
     background-color: #e2e2e2;
 }
+
 .navbar-custom .dropdown-item .item-text {
     font: 700 0.75rem/1.5rem "Montserrat", sans-serif;
 }
+
 .navbar-custom .dropdown-item:hover .item-text {
     color: rgb(179, 179, 179);
 }
 
+
 /* Navbar-brand Text Logo  01/17 */
+
 .navbar-brand {
     float: left;
     font-size: 1.5em;
@@ -642,11 +697,13 @@ screen and (-ms-high-contrast: none) {
     padding: 1em 0;
     text-align: center;
 }
+
 .navbar-brand,
 .brand-title {
     color: #000;
     font-weight: 700;
 }
+
 .navbar-brand,
 .brand-subtitle {
     color: rgb(139, 139, 139);
@@ -656,13 +713,16 @@ screen and (-ms-high-contrast: none) {
     letter-spacing: 0.12em;
     padding-left: 0.12em;
 }
+
 .navbar-brand:hover,
 .navbar-brand:focus {
     text-decoration: none;
 }
+
 .navbar-brand>.navbar-brand.brand-subtitle {
     display: block;
 }
+
 @media (min-width: 768px) {
     .navbar>.container .navbar-brand,
     .navbar>.container-fluid .navbar-brand {
@@ -670,48 +730,54 @@ screen and (-ms-high-contrast: none) {
         background-color: #e2e2e2;
     }
 }
+
 @-webkit-keyframes fadeDropdown {
     0% {
         opacity: 0;
     }
-    
     100% {
         opacity: 1;
     }
 }
+
 @keyframes fadeDropdown {
     0% {
         opacity: 0;
     }
-    
     100% {
         opacity: 1;
     }
 }
+
 .navbar-custom .dropdown-toggle:focus {
     /* removes dropdown outline on focus  */
-    
     outline: 0;
 }
+
 .navbar-custom .dropdown-menu {
     margin-top: 0;
     border: none;
     border-radius: 0.25rem;
     background-color: #e2e2e2;
 }
+
 .navbar-custom .dropdown-item {
     color: rgb(0, 0, 0);
     text-decoration: none;
 }
+
 .navbar-custom .dropdown-item:hover {
     background-color: #e2e2e2;
 }
+
 .navbar-custom .dropdown-item .item-text {
     font: 700 0.75rem/1.5rem "Montserrat", sans-serif;
 }
+
 .navbar-custom .dropdown-item:hover .item-text {
     color: #949494;
 }
+
 .navbar-custom .dropdown-items-divide-hr {
     width: 100%;
     height: 1px;
@@ -721,94 +787,124 @@ screen and (-ms-high-contrast: none) {
     opacity: 0.2;
 }
 
+
 /* end of dropdown menu */
+
 .navbar-custom .social-icons {
     display: none;
 }
+
 .navbar-custom .navbar-toggler {
     border: none;
     color: #000000;
     font-size: 2rem;
 }
+
 .navbar-custom button[aria-expanded="false"] .navbar-toggler-awesome.fas.fa-times {
     display: none;
 }
+
 .navbar-custom button[aria-expanded="false"] .navbar-toggler-awesome.fas.fa-bars {
     display: inline-block;
 }
+
 .navbar-custom button[aria-expanded="true"] .navbar-toggler-awesome.fas.fa-bars {
     display: none;
 }
+
 .navbar-custom button[aria-expanded="true"] .navbar-toggler-awesome.fas.fa-times {
     display: inline-block;
     margin-right: 0.125rem;
 }
 
+
 /*********************/
+
 
 /*    04. Header     */
 
+
 /*********************/
+
 .header {
     background: linear-gradient(to bottom right, rgba(72, 72, 212, 0), rgba(241, 104, 104, 0)), url('../images/home.jpg') center center no-repeat;
     background-size: cover;
 }
+
 .header .header-content {
     padding-top: 8.5rem;
     padding-bottom: 7rem;
     text-align: center;
 }
+
 .header .text-container {
     margin-bottom: 3rem;
 }
+
 .header h1 {
     margin-bottom: 1rem;
 }
+
 
 /*******************************/
 
+
 /*    Hero Image URL Above    */
 
+
 /******************************/
+
 .header .header-content {
     padding-top: 8.5rem;
     padding-bottom: 7rem;
     text-align: center;
 }
+
 .header .text-container {
     margin-bottom: 3rem;
 }
+
 .header h1 {
     margin-bottom: 1rem;
 }
+
 .header #js-rotating {
     color: #000000;
 }
+
 .header .p-large {
     margin-bottom: 2rem;
 }
+
 .header .btn-solid-lg {
     margin-right: 0.5rem;
     margin-bottom: 1.25rem;
 }
 
+
 /************************/
+
 
 /*     05. Features     */
 
+
 /************************/
+
 .tabs {
     padding-top: 6.5rem;
     padding-bottom: 4.25rem;
     background-color: #2f2c3d;
 }
+
 .tabs h2 {
     margin-bottom: 1.125rem;
     text-align: center;
 }
+
 .tabs .p-heading {
     margin-bottom: 3.125rem;
 }
+
 .tabs .nav-tabs {
     margin-right: auto;
     margin-bottom: 2.5rem;
@@ -816,6 +912,7 @@ screen and (-ms-high-contrast: none) {
     justify-content: center;
     border-bottom: none;
 }
+
 .tabs .nav-link {
     margin-bottom: 1rem;
     padding: 0.5rem 1.375rem 0.25rem 1.375rem;
@@ -827,30 +924,37 @@ screen and (-ms-high-contrast: none) {
     text-decoration: none;
     transition: all 0.2s ease;
 }
+
 .tabs .nav-link.active,
 .tabs .nav-link:hover {
     border-bottom: 0.1875rem solid rgb(17, 0, 255);
     background-color: transparent;
     color: rgb(17, 0, 255);
 }
+
 .tabs .nav-link .fas {
     margin-right: 0.375rem;
     font-size: 1rem;
 }
+
 .tabs .tab-content {
     width: 100%;
     /* for proper display in IE11 */
 }
+
 .tabs .card {
     border: none;
     background: transparent;
 }
+
 .tabs .card-body {
     padding: 1rem 0 1.25rem 0;
 }
+
 .tabs .card-title {
     margin-bottom: 0.5rem;
 }
+
 .tabs .card .card-icon {
     display: inline-block;
     width: 3.5rem;
@@ -860,90 +964,115 @@ screen and (-ms-high-contrast: none) {
     text-align: center;
     vertical-align: top;
 }
+
 .tabs .card .card-icon .fas,
 .tabs .card .card-icon .far {
     color: #fff;
     font-size: 1.75rem;
     line-height: 3.5rem;
 }
+
 .tabs #tab-1 .card.left-pane .text-wrapper {
     display: inline-block;
     width: 75%;
 }
+
 .tabs #tab-1 .card.left-pane .card-icon {
     float: left;
     margin-right: 1rem;
 }
+
 .tabs #tab-1 img {
     display: block;
     margin: 2rem auto 3rem auto;
 }
+
 .tabs #tab-1 .card.right-pane .text-wrapper {
     display: inline-block;
     width: 75%;
 }
+
 .tabs #tab-1 .card.right-pane .card-icon {
     margin-right: 1rem;
 }
+
 .tabs #tab-2 img {
     display: block;
     margin: 0 auto 2rem auto;
 }
+
 .tabs #tab-2 .text-area {
     margin-top: 1.5rem;
 }
+
 .tabs #tab-2 h3 {
     margin-bottom: 0.75rem;
 }
+
 .tabs #tab-2 .icon-cards-area {
     margin-top: 2.5rem;
 }
+
 .tabs #tab-2 .icon-cards-area .card {
     width: 100%;
     /* for proper display in IE11 */
 }
+
 .tabs #tab-3 .icon-cards-area .card {
     width: 100%;
     /* for proper display in IE11 */
 }
+
 .tabs #tab-3 .text-area {
     margin-top: 0.75rem;
     margin-bottom: 4rem;
 }
+
 .tabs #tab-3 h3 {
     margin-bottom: 0.75rem;
 }
+
 .tabs #tab-3 img {
     margin: 0 auto 3rem auto;
 }
 
+
 /*********************/
+
 
 /*     07. Video     */
 
+
 /*********************/
+
 .basic-1 {
     padding-top: 6.375rem;
     padding-bottom: 6.875rem;
     background: url("../images/video-background.jpg") center center no-repeat;
     background-size: cover;
 }
+
 .basic-1 h2 {
     margin-bottom: 1.125rem;
     text-align: center;
 }
+
 .basic-1 .p-heading {
     margin-bottom: 4rem;
     text-align: center;
 }
+
 .basic-1 .image-container img {
     border-radius: 0.375rem;
 }
+
 .basic-1 .video-wrapper {
     position: relative;
 }
 
+
 /* Video Play Button */
+
 .basic-1 .video-play-button {
     position: absolute;
     z-index: 10;
@@ -957,6 +1086,7 @@ screen and (-ms-high-contrast: none) {
     border-radius: 50%;
     transform: translateX(-50%) translateY(-50%);
 }
+
 .basic-1 .video-play-button:before {
     content: "";
     position: absolute;
@@ -972,6 +1102,7 @@ screen and (-ms-high-contrast: none) {
     animation: pulse-border 1500ms ease-out infinite;
     transform: translateX(-50%) translateY(-50%);
 }
+
 .basic-1 .video-play-button:after {
     content: "";
     position: absolute;
@@ -986,6 +1117,7 @@ screen and (-ms-high-contrast: none) {
     transition: all 200ms;
     transform: translateX(-50%) translateY(-50%);
 }
+
 .basic-1 .video-play-button span {
     position: relative;
     display: block;
@@ -998,75 +1130,96 @@ screen and (-ms-high-contrast: none) {
     border-top: 1rem solid transparent;
     border-bottom: 1rem solid transparent;
 }
+
 @-webkit-keyframes pulse-border {
     0% {
         transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
         opacity: 1;
     }
-    
     100% {
         transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
         opacity: 0;
     }
 }
+
 @keyframes pulse-border {
     0% {
         transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
         opacity: 1;
     }
-    
     100% {
         transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
         opacity: 0;
     }
 }
 
+
 /* end of video play button */
 
+
 /*************************/
+
 
 /*     09. Details 1     */
 
+
 /*************************/
+
 .basic-2 {
     padding-top: 6rem;
     padding-bottom: 3.5rem;
 }
+
 .basic-2 img {
     margin-bottom: 3.5rem;
+    border-radius: 25px;
+    box-shadow: 8px 8px 8px 1px rgba(0, 0, 0, 0.25);
 }
+
 .basic-2 h3 {
     margin-bottom: 1.125rem;
 }
+
 .basic-2 .btn-solid-reg {
     margin-top: 0.5rem;
 }
 
+
 /*************************/
+
 
 /*     10. Details 2     */
 
+
 /*************************/
+
 .basic-3 {
     padding-top: 3.5rem;
     padding-bottom: 7.25rem;
     /* background-color: #e2e2e2; */
 }
+
 .basic-3 .text-container {
     margin-bottom: 3.5rem;
 }
+
 .basic-3 h3 {
     margin-bottom: 1.125rem;
 }
+
 .basic-3 .btn-solid-reg {
     margin-top: 0.5rem;
 }
 
+
 /**********************************/
+
 
 /*     11. Details Lightboxes     */
 
+
 /**********************************/
+
 .lightbox-basic {
     position: relative;
     max-width: 46.875rem;
@@ -1076,15 +1229,18 @@ screen and (-ms-high-contrast: none) {
     background-color: #2f2c3d;
     text-align: left;
 }
+
 .lightbox-basic img {
     display: block;
     margin-right: auto;
     margin-bottom: 3rem;
     margin-left: auto;
 }
+
 .lightbox-basic h3 {
     margin-bottom: 0.625rem;
 }
+
 .lightbox-basic hr {
     width: 3.75rem;
     height: 0.125rem;
@@ -1095,23 +1251,28 @@ screen and (-ms-high-contrast: none) {
     background-color: #00c9db;
     text-align: left;
 }
+
 .lightbox-basic h4 {
     margin-top: 1.75rem;
     margin-bottom: 0.75rem;
 }
+
 .lightbox-basic table {
     margin-top: 1rem;
     margin-bottom: 1.5rem;
 }
+
 .lightbox-basic table tr {
     line-height: 1.75em;
 }
+
 .lightbox-basic table .icon-cell {
     width: 2rem;
     padding-right: 0.25rem;
     color: #00c9db;
     text-align: center;
 }
+
 .lightbox-basic a.mfp-close.as-button {
     position: relative;
     width: auto;
@@ -1120,9 +1281,11 @@ screen and (-ms-high-contrast: none) {
     color: #00c9db;
     opacity: 1;
 }
+
 .lightbox-basic a.mfp-close.as-button:hover {
     color: #f1f1f8;
 }
+
 .lightbox-basic button.mfp-close.x-button {
     position: absolute;
     top: -0.375rem;
@@ -1132,127 +1295,165 @@ screen and (-ms-high-contrast: none) {
     color: #f1f1f8;
 }
 
+
 /************************/
+
 
 /*     13. Download     */
 
+
 /************************/
+
 .basic-4 {
     padding-top: 6.5rem;
     padding-bottom: 6.75rem;
     background: url("../images/download-background.jpg") center center no-repeat;
     background-size: cover;
 }
+
 .basic-4 .text-container {
     margin-bottom: 3.5rem;
     text-align: center;
 }
+
 .basic-4 h2 {
     margin-bottom: 1.25rem;
 }
+
 .basic-4 .p-large {
     margin-bottom: 1.75rem;
 }
+
 .basic-4 .btn-solid-lg {
     margin-right: 0.5rem;
     margin-bottom: 1.25rem;
 }
 
+
 /***********************/
+
 
 /*     16. Contact     */
 
+
 /***********************/
+
 .form {
     padding-top: 6.25rem;
     padding-bottom: 5.625rem;
     background-size: cover;
     background-color: #e2e2e2;
 }
+
 .form h2 {
     margin-bottom: 1.125rem;
     text-align: center;
 }
+
 .form .list-unstyled {
     margin-bottom: 3.75rem;
     font-size: 1rem;
     line-height: 1.5rem;
     text-align: center;
 }
+
 .form .list-unstyled .fas,
 .form .list-unstyled .fab {
     margin-right: 0.5rem;
     font-size: 0.875rem;
     color: #000;
 }
+
 .form .list-unstyled .fa-phone {
     vertical-align: 3%;
 }
 
+
 /**********************/
+
 
 /*     16. Footer     */
 
+
 /**********************/
+
 .footer {
     padding-top: 5rem;
     background-color: #fff;
 }
+
 .footer .footer-col {
     margin-bottom: 2.25rem;
 }
+
 .footer h4 {
     margin-bottom: 1rem;
 }
+
 .footer .list-unstyled .fas {
     color: #343a40;
     font-size: 0.5rem;
     line-height: 1.375rem;
 }
+
 .footer .list-unstyled .media-body {
     margin-left: 0.625rem;
 }
+
 .footer .fa-stack {
     margin-bottom: 0.75rem;
     margin-right: 0.5rem;
     font-size: 1.5rem;
 }
+
 .footer .fa-stack .fa-stack-1x {
     color: #262431;
     transition: all 0.2s ease;
 }
+
 .footer .fa-stack .fa-stack-2x {
     color: #f1f1f8;
     transition: all 0.2s ease;
 }
+
 .footer .fa-stack:hover .fa-stack-1x {
     color: #f1f1f8;
 }
+
 .footer .fa-stack:hover .fa-stack-2x {
     color: #0012b1;
 }
 
+
 /*************************/
+
 
 /*     17. Copyright     */
 
+
 /*************************/
+
 .copyright {
     padding-top: 1rem;
     padding-bottom: 0.5rem;
     background-color: #ffffff;
     text-align: center;
 }
+
 .copyright .p-small {
     color: #000000;
     opacity: 0.6;
 }
 
+
 /**********************************/
+
 
 /*     18. Back To Top Button     */
 
+
 /**********************************/
+
 a.back-to-top {
     position: fixed;
     z-index: 999;
@@ -1266,70 +1467,90 @@ a.back-to-top {
     background-size: 1.125rem 1.125rem;
     text-indent: -9999px;
 }
+
 a:hover.back-to-top {
     background-color: #000000;
 }
 
+
 /***************************/
+
 
 /*     19. Extra Pages     */
 
+
 /***************************/
+
 .ex-header {
     padding-top: 8rem;
     padding-bottom: 5rem;
     background: linear-gradient(to bottom right, #2c1a7e, #5557db);
     text-align: center;
 }
+
 .ex-basic-1 {
     padding-top: 2rem;
     padding-bottom: 0.875rem;
     background-color: #2f2c3d;
 }
+
 .ex-basic-1 .breadcrumbs {
     margin-bottom: 1.125rem;
 }
+
 .ex-basic-1 .breadcrumbs .fa {
     margin-right: 0.5rem;
     margin-left: 0.625rem;
 }
+
 .ex-basic-2 {
     padding-top: 4.75rem;
     padding-bottom: 4rem;
     background-color: #262431;
 }
+
 .ex-basic-2 h3 {
     margin-bottom: 1rem;
 }
+
 .ex-basic-2 .text-container {
     margin-bottom: 3.625rem;
 }
+
 .ex-basic-2 .text-container.last {
     margin-bottom: 0;
 }
+
 .ex-basic-2 .list-unstyled .fas {
     color: #343a40;
     font-size: 0.5rem;
     line-height: 1.375rem;
 }
+
 .ex-basic-2 .list-unstyled .media-body {
     margin-left: 0.625rem;
 }
+
 .ex-basic-2 .btn-outline-reg {
     margin-top: 1.75rem;
 }
+
 .ex-basic-2 .image-container-large {
     margin-bottom: 4rem;
 }
+
 .ex-basic-2 .image-container-large img {
     border-radius: 0.25rem;
 }
+
 .ex-basic-2 .image-container-small img {
     border-radius: 0.25rem;
 }
+
 .ex-basic-2 .text-container.dark-bg {
     padding: 1.625rem 1.5rem 0.75rem 2rem;
     background-color: #f9fafc;
 }
+
 
 /* End of Extra Page */

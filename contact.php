@@ -244,7 +244,7 @@ Newton Square Counseling Center
                     <!-- end of col -->
                     <div class="col-lg-6">
                         <div class="image-container">
-                            <img class="img-fluid" src="svg/treatment-plan.svg" alt="alternative">
+                            <img class="img-fluid" src="images/email.svg" alt="A graphic image of a envolope.">
                         </div>
                         <!-- end of image-container -->
                     </div>
