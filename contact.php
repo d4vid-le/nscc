@@ -1,5 +1,58 @@
 <!DOCTYPE html>
 <?php error_reporting(0); ?>
+<?php
+$servername = "localhost:3306";
+$username = "root";
+$password = "JRawlsk120";
+$dbname = "forms";
+?>
+
+<!-- PHP Database Connection Starts-->
+<?php $name = $email = $company = $comments = "";
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    try {
+        $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $stmt = $conn->prepare("INSERT INTO feedback (Name,Email,Company,Comments) VALUES (:name, :email, :company, :comments)");
+        $stmt->bindParam(':name', $name);
+        $stmt->bindParam(':email', $email);
+        $stmt->bindParam(':company', $company);
+        $stmt->bindParam(':comments', $comments);
+
+        $name = clean($_POST["name"]);
+        $email = clean($_POST["email"]);
+        $company = clean($_POST["company"]);
+        $comments = clean($_POST["comments"]);
+        $stmt->execute();
+
+        echo "<div style='color:navy;'><h2>We Have Received Following Message From You:</h2>";
+        echo "Your Name: " . $name;
+        echo "<br>";
+        echo "Your Email Address: " . $email;
+        echo "<br>";
+        echo "Your Company: " . $company;
+        echo "<br>";
+        echo "Your Comments: " . $comments;
+        echo "<br>";
+        echo "<h2>We will get back to you as soon as possible.</h2></div>";
+    } catch (PDOException $e) {
+        echo "Error: " . $e->getMessage();
+    }
+}
+
+function clean($userInput)
+{
+    $userInput = trim($userInput);
+    $userInput = stripslashes($userInput);
+    $userInput = htmlspecialchars($userInput);
+    return $userInput;
+}
+
+$conn = null;
+?>
+
+<!-- PHP Database Connection Ends-->
+
 <html lang="en">
 <!--   
     __   __ ____  ____ ____
@@ -77,7 +130,6 @@ Newton Square Counseling Center
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-188601839-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-
         function gtag() {
             dataLayer.push(arguments);
         }
@@ -88,36 +140,12 @@ Newton Square Counseling Center
 
     <style>
         .bg-primary {
-            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1000' height='1550' preserveAspectRatio='none' viewBox='0 0 1000 1550'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1097%26quot%3b)' fill='none'%3e%3crect width='1000' height='1550' x='0' y='0' fill='rgba(255%2c 255%2c 255%2c 1)'%3e%3c/rect%3e%3cpath d='M615.6732426313451 547.4740617123426L723.8074025166645 696.3079643638355 872.6413051681574 588.173804478516 764.507145282838 439.3399018270232z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M619.1003327527126 1533.6206228808928L417.48891982391467 1338.926744542559 222.79504148558078 1540.538157471357 424.40645441437874 1735.2320358096908z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M1084.2013701054793 917.5739235281361L913.972958993045 758.8333620765471 755.2323975414561 929.0617731889815 925.4608086538904 1087.8023346405705z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M909.3836430694145 269.5647085310606L717.851220951795 180.25167331263884 628.5381857333732 371.7840954302583 820.0706078509927 461.09713064868004z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float2'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1097'%3e%3crect width='1000' height='1550' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e") !important;
+            background-image: url() !important;
         }
     </style>
-
 </head>
 
 <body data-spy="scroll" data-target=".fixed-top">
-    <!-- php content insert-->
-    <?php
-    if (isset($_POST['submit'])) {
-        $name = htmlspecialchars(stripslashes(trim($_POST['name'])));
-        $subject = htmlspecialchars(stripslashes(trim($_POST['subject'])));
-        $email = htmlspecialchars(stripslashes(trim($_POST['email'])));
-        $message = htmlspecialchars(stripslashes(trim($_POST['message'])));
-        if (!preg_match("/^[A-Za-z .'-]+$/", $name)) {
-            $name_error = 'Invalid name';
-        }
-        if (!preg_match("/^[A-Za-z .'-]+$/", $subject)) {
-            $subject_error = 'Invalid subject';
-        }
-        if (!preg_match("/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/", $email)) {
-            $email_error = 'Invalid email';
-        }
-        if (strlen($message) === 0) {
-            $message_error = 'Your message should not be empty';
-        }
-    }
-    ?>
-
-
     <!-- Preloader -->
     <div class="loader" id="preloader">
         <div class="wrap">
@@ -283,7 +311,7 @@ Newton Square Counseling Center
 
                                         </div>
 
-                                        <!-- form element starts-->
+ <!-- form starts-->
                                         <form id="contactForm" class="contactForm" name="contactForm" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" action=method="POST">
 
                                             <div class="row">
