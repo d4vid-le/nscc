@@ -1,0 +1,234 @@
+Contact Us Form using PHP and PDO-MySQL
+
+
+
+Step 1: Database
+
+mysql -h host -u deez -p forms
+
+Enter Prompt: ***
+
+mysql -u deez -p forms
+
+Creating Database in MySQL:
+
+
+
+CREATE DATABASE forms;
+
+USE forms 
+
+
+
+mysql$:
+
+
+
+DROP TABLE IF EXISTS `feedback`;
+
+CREATE TABLE IF NOT EXISTS `feedback` (  
+
+`userID` int(11) NOT NULL AUTO_INCREMENT,  
+
+`Name` varchar(50) NOT NULL,  
+
+`Email` varchar(50) NOT NULL,  
+
+`Company` varchar(50) NOT NULL,  
+
+`Comments` text NOT NULL,  
+
+PRIMARY KEY (`userID`)
+
+) ENGINE=MyISAM DEFAULT CHARSET=latin1; 
+
+COMMIT;
+
+
+
+Step 2: Create a .php file
+
+
+
+Keep this file in your root folder so that you can easily add a link of this file to your website, which will become yourdomain.com/contact.php
+
+
+
+Step 3: Add a database connection
+
+
+
+Add database connection to that file in the beginning.
+
+
+
+<?php 
+
+
+
+$servername = "localhost:3306"; 
+
+$username = "root"; 
+
+$password = "JRawlsk120"; 
+
+$dbname = "forms"; 
+
+
+
+?>
+
+
+
+________________________________________________________________
+
+
+
+Step 4: HTML form
+
+
+
+<h2>Please Fill Out The Form</h2> 
+
+
+
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">    
+
+Full Name: <input type="text" name="name" required>  
+
+<br><br>  
+
+E-mail Address: <input type="text" name="email" required>  
+
+<br><br>  
+
+Company: <input type="text" name="company"> <br><br>  Comments/Feedback: <textarea name="comments" rows="5" cols="40" required></textarea>  
+
+<br><br>
+
+<input type="submit" name="submit" value="Submit">   
+
+</form>
+
+
+
+
+
+Step 5: Database Connection
+
+
+
+<?php $name = $email = $company = $comments = ""; 
+
+
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {  
+
+try {    
+
+$conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
+
+
+
+//code continues...
+
+$stmt = $conn->prepare("INSERT INTO feedback (Name,Email,Company,Comments) VALUES (:name, :email, :company, :comments)");    
+
+
+
+ $stmt->bindParam(':name', $name);      $stmt->bindParam(':email', $email);    $stmt->bindParam(':company', $company);    $stmt->bindParam(':comments', $comments);    
+
+
+
+$name = clean($_POST["name"]);   
+
+$email = clean($_POST["email"]);    
+
+$company = clean($_POST["company"]);    
+
+$comments = clean($_POST["comments"]);    
+
+$stmt->execute(); 
+
+
+
+//code continues
+
+
+
+echo "<div style='color:navy;'><h2>We Have Received Following Message From You:</h2>";    echo "Your Name: ". $name;    echo "<br>";    echo "Your Email Address: " . $email;    echo "<br>";    echo "Your Company: ". $company;    echo "<br>";    echo "Your Comments: " . $comments;    echo "<br>";    echo "<h2>We will get back to you as soon as possible.</h2></div>"; //code continues
+
+
+
+
+
+ }  
+
+catch(PDOException $e)  
+
+{  
+
+echo "Error: " . $e->getMessage();  
+
+} 
+
+} 
+
+
+
+//code continues
+
+
+
+function clean($userInput) {  
+
+    $userInput = trim($userInput);  
+
+    $userInput = stripslashes($userInput);           $userInput = htmlspecialchars($userInput);       return $userInput; 
+
+} 
+
+$conn = null; 
+
+
+
+?> 
+
+
+
+//end of the code
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

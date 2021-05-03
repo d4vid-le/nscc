@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $name = clean($_POST["name"]);
         $email = clean($_POST["email"]);
-        $company = clean($_POST["company"]);
+        $company = clean($_POST["subject"]);
         $comments = clean($_POST["comments"]);
         $stmt->execute();
 
@@ -130,6 +130,7 @@ Newton Square Counseling Center
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-188601839-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
+
         function gtag() {
             dataLayer.push(arguments);
         }
@@ -294,7 +295,7 @@ Newton Square Counseling Center
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-md-6 text-center mb-5">
-                        <h2 class="heading-section">General Contact Form</h2>
+                        <h2 class="heading-section">Contact Form</h2>
                     </div>
                 </div>
                 <div class="row justify-content-center">
@@ -311,289 +312,273 @@ Newton Square Counseling Center
 
                                         </div>
 
- <!-- form starts-->
-                                        <form id="contactForm" class="contactForm" name="contactForm" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST" action=method="POST">
+                                        <!--Contact Form starts-->
+                                        <form method="POST" action=method="POST" id="contactForm" class="contactForm" name="contactForm" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
 
                                             <div class="row">
                                                 <div class="col-md-6">
                                                     <div class="form-group">
 
-                                                        <!-- vistor name-->
-                                                        <label class="label" for="name">Name</label>
-                                                        <input id="name" class="form-control" type="text" name="name" placeholder="Name" required>
-                                                        <p><?php if (isset($name_error)) echo $name_error; ?></p>
-
+                                                        <!--Vistor name-->
+                                                        <label class="label" for="name">Full Name</label>
+                                                        <input id="name" class="form-control" type="text" name="name" placeholder="Full Name" required>
+                                                        <p>
+                                                            <?php if (isset($name_error)) echo $name_error; ?></p>
                                                     </div>
                                                 </div>
 
-                                                <div class="col-md-6">
-                                                    <div class="form-group">
-
-                                                        <!--vistor tel-->
-                                                        <label for="tel" class="label" for="phone">Phone</label>
-
-                                                        <input type="tel" id="tel" class="form-control" name="tel" placeholder="(123)456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
-
-                                                        <p><?php if (isset($tel_error)) echo $tel_error; ?></p>
-
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-12">
-                                                    <div class="label">
-
-                                                        <!-- vistor emails-->
-                                                        <label class="label" for="email">Email</label>
-                                                        <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
-                                                        <p><?php if (isset($email_error)) echo $email_error; ?></p>
-
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-md-12">
-                                                    <br>
-                                                    <div class="form-group">
-
-                                                        <!--vistor subject/title -->
-                                                        <label for="subject" id="subject" class="label" for="subject">Subject</label>
-
-                                                        <input type="text" id="subject" class="form-control" name="subject" placeholder="Subject" required>
-
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-12">
-                                                    <div class="form-group">
-
-                                                        <!-- vistor message -->
-                                                        <label class="label" for="#">Message</label>
-
-                                                        <textarea name="message" class="form-control" id="message" cols="30" rows="4" placeholder="Message" required></textarea>
-
-                                                        <p><?php if (isset($message_error)) echo $message_error; ?></p>
-                                                        <input type="submit" name="submit" value="Send Message" class="btn btn-outline-dark">
-
-                                                        <div class="submitting"></div>
-                                                        <?php
-                                                        if (isset($_POST['submit']) && !isset($name_error) && !isset($subject_error) && !isset($email_error) && !isset($message_error)) {
-                                                            $to = 'metapixels@outlook.com'; // edit here
-                                                            $body = " Name: $name\n E-mail: $email\n Message:\n $message";
-                                                            if (mail($to, $subject, $body)) {
-                                                                echo '<p style="color: green">Message sent</p>';
-                                                            } else {
-                                                                echo '<p>Error occurred, please try again later</p>';
-                                                            }
-                                                        }
-                                                        ?>
-
-                                                    </div>
-                                                </div>
-                                                <div class=" col-md-12">
-                                                    <div class="form-group">
 
 
+                                                <!-- Vistor Emails-->
+                                                <label class="label" for="email">Email</label>
+                                                <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
+                                                <p><?php if (isset($email_error)) echo $email_error; ?></p>
 
-                                                    </div>
-                                                </div>
                                             </div>
-                                        </form>
                                     </div>
-                                </div>
-                                <div class="col-lg-4 col-md-5 d-flex align-items-stretch">
-                                    <div class="info-wrap bg-primary w-100 p-md-5 p-4">
 
-                                        <h3>Contact Us</h3>
-
-                                        <p class="mb-4">Diam quis enim lobortis scelerisque fermentum dui faucibus in ornare. Eleifend mi in nulla posuere sollicitudin. </p>
-                                        <p class="mb-4">We're open for any questions or additional information. Our Coordinator will process your information within 1-2 business day.</p>
-                                        <div class="dbox w-100 d-flex align-items-start">
-                                            <div class="icon d-flex align-items-center justify-content-center">
-                                                <span class="fa fa-map-marker"></span>
-                                            </div>
-                                            <div class="text pl-3">
-                                                <p><span>Address:</span> 198 West 21th Street, Suite 721 Worchester MA 10016</p>
-                                            </div>
+                                    <div class="col-md-12">
+                                        <br>
+                                        <div class="form-group">
+                                            <!--Vistor Subject-->
+                                            <label for="subject" id="subject" class="label" for="subject">Subject</label>
+                                            <input type="text" id="subject" class="form-control" name="subject" placeholder="Subject" required>
                                         </div>
-                                        <div class="dbox w-100 d-flex align-items-center">
-                                            <div class="icon d-flex align-items-center justify-content-center">
-                                                <span class="fa fa-phone"></span>
-                                            </div>
-                                            <div class="text pl-3">
-                                                <p><span>Phone:</span> <a href="tel://1234567920">
-                                                        (123)523-5598</a></p>
-                                            </div>
-                                        </div>
-                                        <div class="dbox w-100 d-flex align-items-center">
-                                            <div class="icon d-flex align-items-center justify-content-center">
-                                                <span class="fa fa-paper-plane"></span>
-                                            </div>
-                                            <div class="text pl-3">
-                                                <p><span>Email:</span> <a href="mailto:info@yoursite.com">info@NSCC-Info.com</a>
-                                                </p>
-                                            </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+
+                                            <!--Vistor Message -->
+                                            <label class="label" for="#">Message</label>
+
+                                            <textarea name="message" class="form-control" id="message" cols="30" rows="4" placeholder="Message" required></textarea>
+
+                                            <p><?php if (isset($message_error)) echo $message_error; ?></p>
+                                            <input type="submit" name="submit" value="Send Message" class="btn btn-outline-dark">
+
+                                            <div class="submitting"></div>
+                                            <?php
+                                            if (isset($_POST['submit']) && !isset($name_error) && !isset($subject_error) && !isset($email_error) && !isset($message_error)) {
+                                                $to = 'metapixels@outlook.com'; // edit here
+                                                $body = " Name: $name\n E-mail: $email\n Message:\n $message";
+                                                if (mail($to, $subject, $body)) {
+                                                    echo '<p style="color: green">Message sent</p>';
+                                                } else {
+                                                    echo '<p>Error occurred, please try again later</p>';
+                                                }
+                                            }
+                                            ?>
 
                                         </div>
-                                        <div class="dbox w-100 d-flex align-items-center">
-                                            <div class="icon d-flex align-items-center justify-content-center">
-                                                <span class="fa fa-globe"></span>
-                                            </div>
-                                            <div class="text pl-3">
-                                                <p><span>Website</span> <a href="#">NSCC-Info.org</a></p>
+                                    </div>
+                                    <div class=" col-md-12">
+                                        <div class="form-group">
 
-                                            </div>
+
+
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
+    </form>
+    </div>
+    </div>
+    <div class="col-lg-4 col-md-5 d-flex align-items-stretch">
+        <div class="info-wrap bg-primary w-100 p-md-5 p-4">
+
+            <h3>Contact Heading</h3>
+
+            <p class="mb-4">Diam quis enim lobortis scelerisque fermentum dui faucibus in ornare. Eleifend mi in nulla posuere sollicitudin. </p>
+            <p class="mb-4">We're open for any questions or additional information. Our Coordinator will process your information within 1-2 business day.</p>
+            <div class="dbox w-100 d-flex align-items-start">
+                <div class="icon d-flex align-items-center justify-content-center">
+                    <span class="fa fa-map-marker"></span>
+                </div>
+                <div class="text pl-3">
+                    <p><span>Address:</span> 198 West 21th Street, Suite 721 Worchester MA 10016</p>
+                </div>
+            </div>
+            <div class="dbox w-100 d-flex align-items-center">
+                <div class="icon d-flex align-items-center justify-content-center">
+                    <span class="fa fa-phone"></span>
+                </div>
+                <div class="text pl-3">
+                    <p><span></span> <a href="tel://1234567920">
+                            (123)523-5598</a></p>
+                </div>
+            </div>
+            <div class="dbox w-100 d-flex align-items-center">
+                <div class="icon d-flex align-items-center justify-content-center">
+                    <span class="fa fa-paper-plane"></span>
+                </div>
+                <div class="text pl-3">
+                    <p><span></span> <a href="mailto:info@yoursite.com">info@NSCC-Info.com</a>
+                    </p>
                 </div>
 
             </div>
-        </section>
-
-
-        <br />
-        <br />
-
-        <!-- Footer -->
-        <div class="footer">
-            <div class="container">
-                <!-- <a class="logo-image" href="index.html"><img src="svg\logo02.svg" alt="alternative"></a> -->
-                <!-- NSCC Logo Image Alt-->
-                <br>
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="footer-col">
-                            <h4>NSCC</h4>
-                            <p> The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book.</p>
-                        </div>
-                    </div>
-                    <!-- end of col -->
-                    <div class="col-md-4">
-
-                    </div>
-                    <!-- end of col -->
-                    <div class="col-md-4">
-                        <div class="footer-col middle">
-                            <h4>Additional Resources</h4>
-                            <ul class="list-unstyled li-space-lg">
-                                <li class="media">
-                                    <i class="fas fa-circle"></i>
-                                    <div class="media-body">Further Information
-                                        <a class="turquoise" href="contact.html">Contact Us</a>
-                                    </div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-circle"></i>
-                                    <div class="media-body">Read our <a class="turquoise" href="privacy-policy.html">Privacy
-                                            Policy</a>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-circle"></i>
-                                    <div class="media-body">Site Navigation <a class="turquoise" href="sitemap.html">Site Map</a>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- end of col -->
+            <div class="dbox w-100 d-flex align-items-center">
+                <div class="icon d-flex align-items-center justify-content-center">
+                    <span class="fa fa-globe"></span>
                 </div>
-                <!-- end of row -->
+                <div class="text pl-3">
+                    <p><span></span> <a href="#">NSCC-Info.org</a></p>
+
+                </div>
             </div>
-            <!-- end of container -->
         </div>
-        <!-- end of footer -->
-        <!-- end of footer -->
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
 
-        <!-- Copyright -->
-        <div class="copyright">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <p class="p-small">Copyright © <a href="#">Newton Square Counseling Center,
-                                2020.</a></p>
+    </div>
+    </section>
+
+
+    <br />
+    <br />
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="container">
+            <!-- <a class="logo-image" href="index.html"><img src="svg\logo02.svg" alt="alternative"></a> -->
+            <!-- NSCC Logo Image Alt-->
+            <br>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="footer-col">
+                        <h4>NSCC</h4>
+                        <p> The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book.</p>
                     </div>
-                    <!-- end of col -->
                 </div>
-                <!-- enf of row -->
+                <!-- end of col -->
+                <div class="col-md-4">
+
+                </div>
+                <!-- end of col -->
+                <div class="col-md-4">
+                    <div class="footer-col middle">
+                        <h4>Additional Resources</h4>
+                        <ul class="list-unstyled li-space-lg">
+                            <li class="media">
+                                <i class="fas fa-circle"></i>
+                                <div class="media-body">Further Information
+                                    <a class="turquoise" href="contact.html">Contact Us</a>
+                                </div>
+                            </li>
+                            <li class="media">
+                                <i class="fas fa-circle"></i>
+                                <div class="media-body">Read our <a class="turquoise" href="privacy-policy.html">Privacy
+                                        Policy</a>
+                            </li>
+                            <li class="media">
+                                <i class="fas fa-circle"></i>
+                                <div class="media-body">Site Navigation <a class="turquoise" href="sitemap.html">Site Map</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- end of col -->
             </div>
-            <!-- end of container -->
+            <!-- end of row -->
         </div>
-        <!-- end of copyright -->
-        <!-- end of copyright -->
+        <!-- end of container -->
+    </div>
+    <!-- end of footer -->
+    <!-- end of footer -->
 
-        <!-- Google Analytics -->
-        <script src="dist/all.js"></script>
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-188601839-1"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
+    <!-- Copyright -->
+    <div class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p class="p-small">Copyright © <a href="#">Newton Square Counseling Center,
+                            2020.</a></p>
+                </div>
+                <!-- end of col -->
+            </div>
+            <!-- enf of row -->
+        </div>
+        <!-- end of container -->
+    </div>
+    <!-- end of copyright -->
+    <!-- end of copyright -->
 
-            function gtag() {
-                dataLayer.push(arguments);
-            }
-            gtag('js', new Date());
-            gtag('config', 'UA-188601839-1');
-        </script>
-        <!-- Gobal Site Tag Ends-->
-        <!-- Google Analytics: Test Script -->
-        <script>
-            (function(i, s, o, g, r, a, m) {
-                i['GoogleAnalyticsObject'] = r;
-                i[r] = i[r] || function() {
-                    (i[r].q = i[r].q || []).push(arguments)
-                }, i[r].l = 1 * new Date();
-                a = s.createElement(o),
-                    m = s.getElementsByTagName(o)[0];
-                a.async = 1;
-                a.src = g;
-                m.parentNode.insertBefore(a, m)
-            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-            ga('create', 'UA-188601839-1', 'auto');
-            ga('send', 'pageview');
-        </script>
-        <!-- End of Google Analytics-->
-        <!-- End of Google Analytics-->
-        <!-- Scripts -->
-        <script src="js/jquery.min.js"></script>
-        <!-- jQuery for Bootstrap's JavaScript plugins -->
-        <script src="js/popper.min.js"></script>
-        <!-- Popper tooltip library for Bootstrap -->
-        <script src="js/bootstrap.min.js">
-            import 'bootstrap';
-            import 'bootstrap/js/dist/util';
-            import 'bootstrap/js/dist/alert';
-        </script>
-        <!-- Bootstrap framework -->
-        <script src="js/jquery.easing.min.js"></script>
-        <!-- jQuery Easing for smooth scrolling between anchors -->
-        <script src="js/swiper.min.js"></script>
-        <!-- Swiper for image and text sliders -->
-        <script src="js/jquery.magnific-popup.js"></script>
-        <!-- Magnific Popup for lightboxes -->
-        <script src="js/morphext.min.js"></script>
-        <!-- Morphtext rotating text in the header -->
-        <script src="js/validator.min.js"></script>
-        <!-- Validator.js - Bootstrap plugin that validates forms -->
-        <script src="js/scripts.js"></script>
-        <!-- Custom scripts -->
-        <script async src="/app/js/index.js"></script>
-        <script src="js/main.js"></script>
-        <!-- build:js scripts/main.min.js -->
-        <script async src="gulpfile.js"></script>
-        <!-- gulp build-->
-        <script>
-            if ('serviceWorker' in navigator) {
-                navigator.serviceWorker.register('/sw.js').then(function(registration) {
-                    // Registration was successful
-                    console.log('ServiceWorker registration successful with scope: ', registration.scope);
-                }).catch(function(err) {
-                    // registration failed :(
-                    console.log('ServiceWorker registration failed: ', err);
-                });
-            }
-        </script>
-        <!-- Serviceworker Script-->
-        <!--End of Scripts -->
+    <!-- Google Analytics -->
+    <script src="dist/all.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-188601839-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-188601839-1');
+    </script>
+    <!-- Gobal Site Tag Ends-->
+    <!-- Google Analytics: Test Script -->
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-188601839-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <!-- End of Google Analytics-->
+    <!-- End of Google Analytics-->
+    <!-- Scripts -->
+    <script src="js/jquery.min.js"></script>
+    <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="js/popper.min.js"></script>
+    <!-- Popper tooltip library for Bootstrap -->
+    <script src="js/bootstrap.min.js">
+        import 'bootstrap';
+        import 'bootstrap/js/dist/util';
+        import 'bootstrap/js/dist/alert';
+    </script>
+    <!-- Bootstrap framework -->
+    <script src="js/jquery.easing.min.js"></script>
+    <!-- jQuery Easing for smooth scrolling between anchors -->
+    <script src="js/swiper.min.js"></script>
+    <!-- Swiper for image and text sliders -->
+    <script src="js/jquery.magnific-popup.js"></script>
+    <!-- Magnific Popup for lightboxes -->
+    <script src="js/morphext.min.js"></script>
+    <!-- Morphtext rotating text in the header -->
+    <script src="js/validator.min.js"></script>
+    <!-- Validator.js - Bootstrap plugin that validates forms -->
+    <script src="js/scripts.js"></script>
+    <!-- Custom scripts -->
+    <script async src="/app/js/index.js"></script>
+    <script src="js/main.js"></script>
+    <!-- build:js scripts/main.min.js -->
+    <script async src="gulpfile.js"></script>
+    <!-- gulp build-->
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js').then(function(registration) {
+                // Registration was successful
+                console.log('ServiceWorker registration successful with scope: ', registration.scope);
+            }).catch(function(err) {
+                // registration failed :(
+                console.log('ServiceWorker registration failed: ', err);
+            });
+        }
+    </script>
+    <!-- Serviceworker Script-->
+    <!--End of Scripts -->
 </body>
 
 </html>
