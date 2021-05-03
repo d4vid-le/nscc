@@ -286,99 +286,53 @@ Newton Square Counseling Center
         <!-- end of header-content -->
     </header>
     <!-- end of header -->
-    <!-- end of header -->
 
-    <br><!-- contact form content -->
-    <!-- contact form content -->
-    <form name="contact" method="POST" data-netlify="true">
-        <section class="ftco-section">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-md-6 text-center mb-5">
-                        <h2 class="heading-section">Contact Form</h2>
-                    </div>
+    <br>
+    <!-- contact form starts-->
+    <form id="contactForm" class="contactForm" name="contactForm" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF "]); ?>" method="POST" action="POST">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <!-- vistor name-->
+                    <label class="label" for="name">Full Name</label>
+                    <input id="name" class="form-control" type="text" name="name" placeholder="Full Name" required>
+                    <p><?php if (isset($name_error)) echo $name_error;
+                        ?></p>
                 </div>
-                <div class="row justify-content-center">
-                    <div class="col-md-12">
-                        <div class="wrapper">
-                            <div class="row no-gutters">
-                                <div class="col-lg-8 col-md-7 order-md-last d-flex align-items-stretch">
-                                    <div class="contact-wrap w-100 p-md-5 p-4">
-                                        <h3 class="mb-4">Get in touch</h3>
-                                        <div id="form-message-warning" class="mb-4">
-                                        </div>
-
-                                        <div id="form-message-success" class="mb-4">
-
-                                        </div>
-
-                                        <!--Contact Form starts-->
-                                        <form method="POST" action=method="POST" id="contactForm" class="contactForm" name="contactForm" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
-
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <div class="form-group">
-
-                                                        <!--Vistor name-->
-                                                        <label class="label" for="name">Full Name</label>
-                                                        <input id="name" class="form-control" type="text" name="name" placeholder="Full Name" required>
-                                                        <p>
-                                                            <?php if (isset($name_error)) echo $name_error; ?></p>
-                                                    </div>
-                                                </div>
-
-
-
-                                                <!-- Vistor Emails-->
-                                                <label class="label" for="email">Email</label>
-                                                <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
-                                                <p><?php if (isset($email_error)) echo $email_error; ?></p>
-
-                                            </div>
-                                    </div>
-
-                                    <div class="col-md-12">
-                                        <br>
-                                        <div class="form-group">
-                                            <!--Vistor Subject-->
-                                            <label for="subject" id="subject" class="label" for="subject">Subject</label>
-                                            <input type="text" id="subject" class="form-control" name="subject" placeholder="Subject" required>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <div class="form-group">
-
-                                            <!--Vistor Message -->
-                                            <label class="label" for="#">Message</label>
-
-                                            <textarea name="message" class="form-control" id="message" cols="30" rows="4" placeholder="Message" required></textarea>
-
-                                            <p><?php if (isset($message_error)) echo $message_error; ?></p>
-                                            <input type="submit" name="submit" value="Send Message" class="btn btn-outline-dark">
-
-                                            <div class="submitting"></div>
-                                            <?php
-                                            if (isset($_POST['submit']) && !isset($name_error) && !isset($subject_error) && !isset($email_error) && !isset($message_error)) {
-                                                $to = 'metapixels@outlook.com'; // edit here
-                                                $body = " Name: $name\n E-mail: $email\n Message:\n $message";
-                                                if (mail($to, $subject, $body)) {
-                                                    echo '<p style="color: green">Message sent</p>';
-                                                } else {
-                                                    echo '<p>Error occurred, please try again later</p>';
-                                                }
-                                            }
-                                            ?>
-
-                                        </div>
-                                    </div>
-                                    <div class=" col-md-12">
-                                        <div class="form-group">
-
-
-
-                                        </div>
-                                    </div>
-                                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <!--vistor tel-->
+                    <label for="tel" class="label" for="phone">Phone</label><input type="tel" id="tel" class="form-control" name="tel" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+                    <p><?php if (isset($tel_error)) echo $tel_error;
+                        ?></p>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="label">
+                    <!-- vistor emails-->
+                    <label class="label" for="email">Email</label><input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
+                    <p><?php if (isset($email_error)) echo $email_error;
+                        ?></p>
+                </div>
+            </div>
+            <div class="col-md-12"><br>
+                <div class="form-group">
+                    <!--vistor subject-->
+                    <label for="subject" id="subject" class="label" for="subject">Subject</label><input type="text" id="subject" class="form-control" name="subject" placeholder="Subject" required>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="form-group">
+                    <!--vistor message-->
+                    <label class="label" for="#">Message</label><textarea name="message" class="form-control" id="message" cols="30" rows="4" placeholder="Message" required></textarea>
+                </div>
+                <input type="submit" name="submit" value="Submit">
+            </div>
+            <div class=" col-md-12">
+                <div class="form-group"></div>
+            </div>
+        </div>
     </form>
     </div>
     </div>
@@ -402,8 +356,9 @@ Newton Square Counseling Center
                     <span class="fa fa-phone"></span>
                 </div>
                 <div class="text pl-3">
-                    <p><span></span> <a href="tel://1234567920">
-                            (123)523-5598</a></p>
+                    <p><span></span>
+                        <a href="tel://1234567920">123-523-5598</a>
+                    </p>
                 </div>
             </div>
             <div class="dbox w-100 d-flex align-items-center">
