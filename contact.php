@@ -274,7 +274,7 @@ Newton Square Counseling Center
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-md-6 text-center mb-5">
-                        <h2 class="heading-section">General Contact Form</h2>
+                        <h2 class="heading-section">Contact Form</h2>
                     </div>
                 </div>
                 <div class="row justify-content-center">
@@ -368,7 +368,8 @@ Newton Square Counseling Center
                                 </div>
                                 <div class="col-lg-4 col-md-5 d-flex align-items-stretch">
                                     <div class="info-wrap bg-primary w-100 p-md-5 p-4">
-                                        <!-- php mysql database connection starts -->
+                                       
+                                    <!-- php mysql database connection starts -->
                                         <?php $name = $email = $company = $comments = "";
                                         if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                             try {
@@ -433,7 +434,7 @@ Newton Square Counseling Center
                                             </div>
                                             <div class="text pl-3">
                                                 <p><span>Phone:</span> <a href="tel://1234567920">
-                                                        (123)523-5598</a></p>
+                                                        123-523-5598</a></p>
                                             </div>
                                         </div>
                                         <div class="dbox w-100 d-flex align-items-center">
@@ -595,18 +596,7 @@ Newton Square Counseling Center
         <script src="js/main.js"></script>
         <!-- build:js scripts/main.min.js -->
         <script async src="gulpfile.js"></script>
-        <!-- gulp build-->
-        <script>
-            if ('serviceWorker' in navigator) {
-                navigator.serviceWorker.register('/sw.js').then(function(registration) {
-                    // Registration was successful
-                    console.log('ServiceWorker registration successful with scope: ', registration.scope);
-                }).catch(function(err) {
-                    // registration failed :(
-                    console.log('ServiceWorker registration failed: ', err);
-                });
-            }
-        </script>
+
         <!-- Serviceworker Script-->
         <!--End of Scripts -->
 </body>
